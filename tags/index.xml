@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 静心明志</title>
+    <link>https://fengcai-sun.github.io/tags/</link>
+    <description>Recent content in Tags on 静心明志</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Jul 2019 16:57:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://fengcai-sun.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NLP</title>
+      <link>https://fengcai-sun.github.io/tags/nlp/</link>
+      <pubDate>Tue, 09 Jul 2019 16:57:00 +0800</pubDate>
+      
+      <guid>https://fengcai-sun.github.io/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pytorch</title>
+      <link>https://fengcai-sun.github.io/tags/pytorch/</link>
+      <pubDate>Tue, 09 Jul 2019 16:57:00 +0800</pubDate>
+      
+      <guid>https://fengcai-sun.github.io/tags/pytorch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://fengcai-sun.github.io/tags/algorithm/</link>
+      <pubDate>Fri, 24 May 2019 17:37:20 +0800</pubDate>
+      
+      <guid>https://fengcai-sun.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://fengcai-sun.github.io/tags/java/</link>
+      <pubDate>Fri, 24 May 2019 17:37:20 +0800</pubDate>
+      
+      <guid>https://fengcai-sun.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ajax</title>
+      <link>https://fengcai-sun.github.io/tags/ajax/</link>
+      <pubDate>Wed, 08 May 2019 14:18:53 +0800</pubDate>
+      
+      <guid>https://fengcai-sun.github.io/tags/ajax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api</title>
+      <link>https://fengcai-sun.github.io/tags/api/</link>
+      <pubDate>Wed, 08 May 2019 14:18:53 +0800</pubDate>
+      
+      <guid>https://fengcai-sun.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://fengcai-sun.github.io/tags/html/</link>
+      <pubDate>Wed, 08 May 2019 14:01:43 +0800</pubDate>
+      
+      <guid>https://fengcai-sun.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://fengcai-sun.github.io/tags/web/</link>
+      <pubDate>Wed, 08 May 2019 14:01:43 +0800</pubDate>
+      
+      <guid>https://fengcai-sun.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thread</title>
+      <link>https://fengcai-sun.github.io/tags/thread/</link>
+      <pubDate>Sun, 05 May 2019 16:58:24 +0800</pubDate>
+      
+      <guid>https://fengcai-sun.github.io/tags/thread/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

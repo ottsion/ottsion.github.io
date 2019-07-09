@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Fengcai.Sun">
+  
+  
+  
+  <link rel="prev" href="https://fengcai-sun.github.io/2019/%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C/" />
+  
+  <link rel="canonical" href="https://fengcai-sun.github.io/2019/nnlm/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           神经网路语言模型(NNLM) | 静心明志
+       
+  </title>
+  <meta name="title" content="神经网路语言模型(NNLM) | 静心明志">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/fengcai-sun.github.io"
+    },
+    "articleSection" : "posts",
+    "name" : "神经网路语言模型(NNLM)",
+    "headline" : "神经网路语言模型(NNLM)",
+    "description" : "这是一个很简单的语言模型，直接看代码\n import numpy as np import torch import torch.nn as nn import torch.optim as optim sentiences = [\x26quot;i like dog\x26quot;, \x26quot;i love coffee\x26quot;, \x26quot;i hate milk\x26quot;] word_list = \x26quot; \x26quot;.join(sentiences).split() word_list = list(set(word_list)) word_dict = {w:i for i,w in enumerate(word_list)} number_dict = {i:w for i,w in enumerate(word_list)} n_class = len(word_dict) n_step = 2 n_hidden = 2 embedDim = 2 def make_batch(sentiences): input_batch = [] target_batch = [] for sen in sentiences: words = sen.",
+    "inLanguage" : "en-us",
+    "author" : "caicai",
+    "creator" : "caicai",
+    "publisher": "caicai",
+    "accountablePerson" : "caicai",
+    "copyrightHolder" : "caicai",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-09 16:57:00 \x2b0800 CST",
+    "dateModified" : "2019-07-09 16:57:00 \x2b0800 CST",
+    "url" : "https:\/\/fengcai-sun.github.io\/2019\/nnlm\/",
+    "wordCount" : "288",
+    "keywords" : [ "pytorch","NLP", "静心明志"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://fengcai-sun.github.io">静心明志</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/about/" title=""></a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://fengcai-sun.github.io">静心明志</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/about/" title=""></a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">神经网路语言模型(NNLM)</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://fengcai-sun.github.io" rel="author">caicai</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-09 itemprop="datePublished">July 9, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://fengcai-sun.github.io/categories/pytorch/"> pytorch </a>
+                        <a href="https://fengcai-sun.github.io/categories/nlp/"> NLP </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <blockquote>
+<p>这是一个很简单的语言模型，直接看代码</p>
+</blockquote>
+
+<pre><code class="language-python">import numpy as np
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+sentiences = [&quot;i like dog&quot;, &quot;i love coffee&quot;, &quot;i hate milk&quot;]
+
+word_list = &quot; &quot;.join(sentiences).split()
+word_list = list(set(word_list))
+word_dict = {w:i for i,w in enumerate(word_list)}
+number_dict = {i:w for i,w in enumerate(word_list)}
+n_class = len(word_dict)
+
+n_step = 2
+n_hidden = 2
+embedDim = 2
+
+def make_batch(sentiences):
+    input_batch = []
+    target_batch = []
+    for sen in sentiences:
+        words = sen.split()
+        input = [word_dict[word] for word in words[:-1]]
+        target = word_dict[words[-1]]
+        input_batch.append(input)
+        target_batch.append(target)
+    return input_batch, target_batch
+</code></pre>
+
+<p>神经网路语言模型(NNLM)的结构图：
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="/images/blog/NNLM.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+
+<pre><code class="language-python">class NNLM(nn.Module):
+    def __init__(self, n_class, n_step, embedDim, hiddenDim):
+        super(NNLM, self).__init__()
+        self.n_class = n_class
+        self.n_step = n_step
+        self.embedDim = embedDim
+        self.hiddenDim = hiddenDim
+        self.embedding = nn.Embedding(self.n_class, self.embedDim)  # 指图片中Ｃ矩阵效果
+        self.H = nn.Parameter(torch.randn(self.n_step * self.embedDim, self.hiddenDim)).type(torch.FloatTensor)
+        self.W = nn.Parameter(torch.randn(self.n_step * self.embedDim, self.n_class)).type(torch.FloatTensor)
+        self.d = nn.Parameter(torch.randn(self.hiddenDim)).type(torch.FloatTensor)
+        self.U = nn.Parameter(torch.randn(self.hiddenDim, self.n_class)).type(torch.FloatTensor)
+        self.b = nn.Parameter(torch.randn(self.n_class)).type(torch.FloatTensor)
+    def forward(self, x):
+        x = self.embedding(x)
+        x = x.view(-1, self.n_step * self.embedDim)
+        tanh = torch.tanh(self.d + torch.mm(x, self.H))   # [batch_size, hiddenDim]
+        output = self.b + torch.mm(x, self.W) + torch.mm(tanh, self.U)
+        return output
+
+model = NNLM(n_class, n_step, embedDim, n_hidden)
+
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+input_batch, target_batch = make_batch(sentiences)
+input_batch = torch.LongTensor(input_batch)
+target_batch = torch.LongTensor(target_batch)
+print(input_batch)
+print(target_batch)
+</code></pre>
+
+<p>输出：
+    tensor([[5, 2],
+            [5, 3],
+            [5, 0]])
+    tensor([1, 6, 4])</p>
+
+<pre><code class="language-python">for epoch in range(5000):
+    optimizer.zero_grad()
+    output = model(inpit_batch)
+    loss = criterion(output, target_batch)
+    if epoch%1000 == 0:
+        print('Epoch: {%04d}, cost:{%.6f}' % (epoch, loss))
+    loss.backward()
+    optimizer.step()
+</code></pre>
+
+<p>输出：
+    Epoch: {0000}, cost:{0.002199}
+    Epoch: {1000}, cost:{0.001139}
+    Epoch: {2000}, cost:{0.000612}
+    Epoch: {3000}, cost:{0.000336}
+    Epoch: {4000}, cost:{0.000187}</p>
+
+<pre><code class="language-python">print(input_batch)
+predict = model(input_batch)
+predict = torch.max(predict.data, 1)[1].numpy() 
+print(predict)
+</code></pre>
+
+<p>输出：
+    tensor([[5, 2],
+            [5, 3],
+            [5, 0]])
+    [1 6 4]</p>
+
+<pre><code class="language-python">print([sen.split()[:2] for sen in sentences], '-&gt;', [number_dict[n.item()] for n in predict.squeeze()])
+</code></pre>
+
+<p>输出：
+    [[&lsquo;i&rsquo;, &lsquo;like&rsquo;], [&lsquo;i&rsquo;, &lsquo;love&rsquo;], [&lsquo;i&rsquo;, &lsquo;hate&rsquo;]] -&gt; [&lsquo;dog&rsquo;, &lsquo;coffee&rsquo;, &lsquo;milk&rsquo;]</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Fengcai.Sun </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://fengcai-sun.github.io/2019/nnlm/>https://fengcai-sun.github.io/2019/nnlm/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://fengcai-sun.github.io/tags/pytorch/">
+                    #pytorch</a></span>
+            
+            <span class="tag"><a href="https://fengcai-sun.github.io/tags/nlp/">
+                    #NLP</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://fengcai-sun.github.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://fengcai-sun.github.io/2019/%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C/" class="prev" rel="prev" title="39.组合总和"><i class="iconfont icon-left"></i>&nbsp;39.组合总和</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://fengcai-sun.github.io">Fengcai.Sun</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
