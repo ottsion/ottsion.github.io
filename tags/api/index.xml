@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>api on 静心明志</title>
-    <link>https://fengcai-sun.github.io/tags/api/</link>
+    <link>https://ottsion.github.io/tags/api/</link>
     <description>Recent content in api on 静心明志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 May 2019 14:18:53 +0800</lastBuildDate>
     
-	<atom:link href="https://fengcai-sun.github.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ottsion.github.io/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>跨域访问api</title>
-      <link>https://fengcai-sun.github.io/2019/%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AEapi/</link>
+      <link>https://ottsion.github.io/2019/%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AEapi/</link>
       <pubDate>Wed, 08 May 2019 14:18:53 +0800</pubDate>
       
-      <guid>https://fengcai-sun.github.io/2019/%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AEapi/</guid>
+      <guid>https://ottsion.github.io/2019/%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AEapi/</guid>
       <description>主程序使用java构建了完整的算法，想快速通过简易前端实现效果可视化的时候产生了跨域访问失败问题，java部分api接口采用springboot快捷提供，前端采用python的flask快速开发。
 前端使用ajax访问其他web服务的后端接口时很容易出现因跨域访问而导致接口调用失败的问题，以下介绍如何使用CORS解决这两个框架的跨域访问问题。
 CORS是一种允许当前域（domain）的资源（比如html/js/web service）被其他域（domain）的脚本请求访问的机制，通常由于同域安全策略（the same-origin security policy）浏览器会禁止这种跨域请求。

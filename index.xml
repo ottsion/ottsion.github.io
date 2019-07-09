@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>静心明志 on 静心明志</title>
-    <link>https://fengcai-sun.github.io/</link>
+    <link>https://ottsion.github.io/</link>
     <description>Recent content in 静心明志 on 静心明志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,10 +10,10 @@
     
     <item>
       <title>神经网路语言模型(NNLM)</title>
-      <link>https://fengcai-sun.github.io/2019/nnlm/</link>
+      <link>https://ottsion.github.io/2019/nnlm/</link>
       <pubDate>Tue, 09 Jul 2019 16:57:00 +0800</pubDate>
       
-      <guid>https://fengcai-sun.github.io/2019/nnlm/</guid>
+      <guid>https://ottsion.github.io/2019/nnlm/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;这是一个很简单的语言模型，直接看代码&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -48,7 +48,7 @@ def make_batch(sentiences):
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;神经网路语言模型(NNLM)的结构图：
-&lt;img src=&#34;https://fengcai-sun.github.io/images/blog/NNLM.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://ottsion.github.io/images/blog/NNLM.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class NNLM(nn.Module):
     def __init__(self, n_class, n_step, embedDim, hiddenDim):
@@ -127,10 +127,10 @@ print(predict)
     
     <item>
       <title>39.组合总和</title>
-      <link>https://fengcai-sun.github.io/2019/%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C/</link>
+      <link>https://ottsion.github.io/2019/%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C/</link>
       <pubDate>Fri, 24 May 2019 17:37:20 +0800</pubDate>
       
-      <guid>https://fengcai-sun.github.io/2019/%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C/</guid>
+      <guid>https://ottsion.github.io/2019/%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C/</guid>
       <description>
 
 &lt;h2 id=&#34;题目&#34;&gt;题目&lt;/h2&gt;
@@ -196,10 +196,10 @@ print(predict)
     
     <item>
       <title>829.连续整数求和</title>
-      <link>https://fengcai-sun.github.io/2019/%E8%BF%9E%E7%BB%AD%E6%95%B4%E6%95%B0%E6%B1%82%E5%92%8C/</link>
+      <link>https://ottsion.github.io/2019/%E8%BF%9E%E7%BB%AD%E6%95%B4%E6%95%B0%E6%B1%82%E5%92%8C/</link>
       <pubDate>Fri, 24 May 2019 16:59:00 +0800</pubDate>
       
-      <guid>https://fengcai-sun.github.io/2019/%E8%BF%9E%E7%BB%AD%E6%95%B4%E6%95%B0%E6%B1%82%E5%92%8C/</guid>
+      <guid>https://ottsion.github.io/2019/%E8%BF%9E%E7%BB%AD%E6%95%B4%E6%95%B0%E6%B1%82%E5%92%8C/</guid>
       <description>
 
 &lt;h2 id=&#34;题目&#34;&gt;题目&lt;/h2&gt;
@@ -246,10 +246,10 @@ print(predict)
     
     <item>
       <title>12.整数转罗马数字</title>
-      <link>https://fengcai-sun.github.io/2019/%E6%95%B0%E5%AD%97%E8%BD%AC%E7%BD%97%E9%A9%AC/</link>
+      <link>https://ottsion.github.io/2019/%E6%95%B0%E5%AD%97%E8%BD%AC%E7%BD%97%E9%A9%AC/</link>
       <pubDate>Fri, 24 May 2019 16:57:00 +0800</pubDate>
       
-      <guid>https://fengcai-sun.github.io/2019/%E6%95%B0%E5%AD%97%E8%BD%AC%E7%BD%97%E9%A9%AC/</guid>
+      <guid>https://ottsion.github.io/2019/%E6%95%B0%E5%AD%97%E8%BD%AC%E7%BD%97%E9%A9%AC/</guid>
       <description>
 
 &lt;h2 id=&#34;题目&#34;&gt;题目&lt;/h2&gt;
@@ -332,10 +332,10 @@ M             1000
     
     <item>
       <title>198.打家劫舍</title>
-      <link>https://fengcai-sun.github.io/2019/%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/</link>
+      <link>https://ottsion.github.io/2019/%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/</link>
       <pubDate>Thu, 09 May 2019 17:45:45 +0800</pubDate>
       
-      <guid>https://fengcai-sun.github.io/2019/%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/</guid>
+      <guid>https://ottsion.github.io/2019/%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/</guid>
       <description>&lt;p&gt;你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，&lt;strong&gt;如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警&lt;/strong&gt;。&lt;/p&gt;
 
 &lt;p&gt;给定一个代表每个房屋存放金额的非负整数数组，计算你&lt;strong&gt;在不触动警报装置的情况下，&lt;/strong&gt;能够偷窃到的最高金额。&lt;/p&gt;
@@ -384,15 +384,15 @@ M             1000
     
     <item>
       <title>11.盛最多水的容器</title>
-      <link>https://fengcai-sun.github.io/2019/%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</link>
+      <link>https://ottsion.github.io/2019/%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</link>
       <pubDate>Thu, 09 May 2019 16:57:00 +0800</pubDate>
       
-      <guid>https://fengcai-sun.github.io/2019/%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</guid>
+      <guid>https://ottsion.github.io/2019/%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</guid>
       <description>&lt;p&gt;给定 &lt;em&gt;n&lt;/em&gt; 个非负整数 *a*1，*a*2，&amp;hellip;，*a*n，每个数代表坐标中的一个点 (&lt;em&gt;i&lt;/em&gt;, &lt;em&gt;ai&lt;/em&gt;) 。在坐标内画 &lt;em&gt;n&lt;/em&gt; 条垂直线，垂直线 &lt;em&gt;i&lt;/em&gt; 的两个端点分别为 (&lt;em&gt;i&lt;/em&gt;, &lt;em&gt;ai&lt;/em&gt;) 和 (&lt;em&gt;i&lt;/em&gt;, 0)。找出其中的两条线，使得它们与 &lt;em&gt;x&lt;/em&gt; 轴共同构成的容器可以容纳最多的水。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;你不能倾斜容器，且 &lt;em&gt;n&lt;/em&gt; 的值至少为 2。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://fengcai-sun.github.io/images/blog/盛最多水的容器.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ottsion.github.io/images/blog/盛最多水的容器.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。&lt;/p&gt;
 
@@ -422,10 +422,10 @@ M             1000
     
     <item>
       <title>跨域访问api</title>
-      <link>https://fengcai-sun.github.io/2019/%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AEapi/</link>
+      <link>https://ottsion.github.io/2019/%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AEapi/</link>
       <pubDate>Wed, 08 May 2019 14:18:53 +0800</pubDate>
       
-      <guid>https://fengcai-sun.github.io/2019/%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AEapi/</guid>
+      <guid>https://ottsion.github.io/2019/%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AEapi/</guid>
       <description>
 
 &lt;p&gt;主程序使用java构建了完整的算法，想快速通过简易前端实现效果可视化的时候产生了跨域访问失败问题，java部分api接口采用springboot快捷提供，前端采用python的flask快速开发。&lt;/p&gt;
@@ -497,10 +497,10 @@ CORS(app, supports_credentials=True)
     
     <item>
       <title>js的ajax方式</title>
-      <link>https://fengcai-sun.github.io/2019/js%E7%9A%84ajax%E6%96%B9%E5%BC%8F/</link>
+      <link>https://ottsion.github.io/2019/js%E7%9A%84ajax%E6%96%B9%E5%BC%8F/</link>
       <pubDate>Wed, 08 May 2019 14:01:43 +0800</pubDate>
       
-      <guid>https://fengcai-sun.github.io/2019/js%E7%9A%84ajax%E6%96%B9%E5%BC%8F/</guid>
+      <guid>https://ottsion.github.io/2019/js%E7%9A%84ajax%E6%96%B9%E5%BC%8F/</guid>
       <description>&lt;p&gt;JS通过ajax调用接口实现数据传送，第一种方式为设置button的点击&lt;code&gt;onclick&lt;/code&gt;方法，第二种通过绑定&lt;code&gt;bind&lt;/code&gt;点击事件获得访问&lt;/p&gt;
 
 &lt;p&gt;用&lt;code&gt;onclick&lt;/code&gt;方式：&lt;/p&gt;
@@ -532,10 +532,10 @@ CORS(app, supports_credentials=True)
     
     <item>
       <title>方法超时放弃执行</title>
-      <link>https://fengcai-sun.github.io/2019/%E6%96%B9%E6%B3%95%E8%B6%85%E6%97%B6%E6%94%BE%E5%BC%83%E6%89%A7%E8%A1%8C/</link>
+      <link>https://ottsion.github.io/2019/%E6%96%B9%E6%B3%95%E8%B6%85%E6%97%B6%E6%94%BE%E5%BC%83%E6%89%A7%E8%A1%8C/</link>
       <pubDate>Sun, 05 May 2019 16:58:24 +0800</pubDate>
       
-      <guid>https://fengcai-sun.github.io/2019/%E6%96%B9%E6%B3%95%E8%B6%85%E6%97%B6%E6%94%BE%E5%BC%83%E6%89%A7%E8%A1%8C/</guid>
+      <guid>https://ottsion.github.io/2019/%E6%96%B9%E6%B3%95%E8%B6%85%E6%97%B6%E6%94%BE%E5%BC%83%E6%89%A7%E8%A1%8C/</guid>
       <description>&lt;p&gt;遇到一个比较不常见的情况，我在流水线式执行一个方法，方法中涉及到数据的获取，有时候获取很快，有时候十几分钟都没结果，因为我这个任务要追求时间效率，可以牺牲小部分异常，所以想到方法超时放弃这个想法：如果这个方法执行超过60秒，就直接pass继续执行下一次。&lt;/p&gt;
 
 &lt;p&gt;具体其实是应用线程去实现这个想法：&lt;/p&gt;
@@ -586,10 +586,10 @@ public class ThreadTest {
     
     <item>
       <title></title>
-      <link>https://fengcai-sun.github.io/about/</link>
+      <link>https://ottsion.github.io/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://fengcai-sun.github.io/about/</guid>
+      <guid>https://ottsion.github.io/about/</guid>
       <description>&lt;p&gt;Hugo is the &lt;strong&gt;world’s fastest framework for building websites&lt;/strong&gt;. It is written in Go.&lt;/p&gt;
 
 &lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
