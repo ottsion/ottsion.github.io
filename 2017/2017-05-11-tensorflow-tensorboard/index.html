@@ -11,6 +11,41 @@
   
   <link rel="prev" href="https://ottsion.github.io/2017/2017-05-11-tensorflow-lost-function/" />
   <link rel="next" href="https://ottsion.github.io/2017/2017-05-11-tensorflow-tensor/" />
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
   <link rel="canonical" href="https://ottsion.github.io/2017/2017-05-11-tensorflow-tensorboard/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -46,7 +81,7 @@
     "articleSection" : "posts",
     "name" : "tensorflow--tensorboard",
     "headline" : "tensorflow--tensorboard",
-    "description" : "来源：Tensorflow 自带可视化Tensorboard使用方法 附项目代码 Tensorboard： 如何更直观的观察数据在神经网络中的变化，或是已经构建的神经网络的结构。上一篇文章说到，可以使用matplotlib第三方可视化，来进行一定程度上的可视化。然而Tensorflow也自带了可视化模块Tensorboard，并且能更直观的看见整个神经网络的结构。 上面的结构图甚至可以展开，变成： 使用： 结构图：\n with tensorflow .name_scope(layer_name):  直接使用以上代码生成一个带可展开符号的一个域，并且支持嵌套操作：\nwith tf.name_scope(layer_name): with tf.name_scope(\x27weights\x27):  节点一般是变量或常量，需要加一个“name=‘’”参数，才会展示和命名，如：\nwith tf.name_scope(\x26lsquo;weights\x26rsquo;):\nWeights = tf.Variable(tf.random_normal([in_size,out_size]))\n结构图符号及意义： 变量： 变量则可使用Tensorflow.histogram_summary()方法：\ntf.histogram_summary(layer_name\x2b\x26quot;\/weights\x26quot;,Weights) #name命名，Weights赋值  常量： 常量则可使用Tensorflow.scalar_summary()方法：\ntf.scalar_summary(\x27loss\x27,loss) #命名和赋值  展示： 最后需要整合和存储SummaryWriter：\n#合并到Summary中 merged = tf.merge_all_summaries() #选定可视化存储目录 writer = tf.train.SummaryWriter(\x26quot;\/目录\x26quot;,sess.graph)  merged也是需要run的，因此还需要：\nresult = sess.run(merged) #merged也是需要run的   writer.add_summary(result,i) 执行： 运行后，会在相应的目录里生成一个文件，执行：\ntensorboard --logdir=\x26quot;\/目录\x26quot;  会给出一段网址： 浏览器中打开这个网址即可，因为有兼容问题，firefox并不能很好的兼容，建议使用Chrome。\n常量在Event中，结构图在Graphs中，变量在最后两个Tag中。\n附项目代码：\nimport tensorflow as tf import numpy as np def add_layer(inputs,in_size,out_size,n_layer,activation_function=None): #activation_function=None线性函数 layer_name=\x26quot;layer%s\x26quot; % n_layer with tf.",
+    "description" : "来源：Tensorflow 自带可视化Tensorboard使用方法 附项目代码 Tensorboard： 如何更直观的观察数据在神经网络中的变化，或是已经构建的神经网络的结构。上一篇文章说到，可以使用matplotlib第三方可视化，来进行一定程度上的可视化。然而Tensorflow也自带了可视化模块Tensorboard，并且能更直观的看见整个神经网络的结构。 上面的结构图甚至可以展开，变成： 使用： 结构图：\n with tensorflow .name_scope(layer_name):  直接使用以上代码生成一个带可展开符号的一个域，并且支持嵌套操作：\nwith tf.name_scope(layer_name): with tf.name_scope(\x27weights\x27):  节点一般是变量或常量，需要加一个“name=‘’”参数，才会展示和命名，如：\nwith tf.name_scope(\x27weights\x27):\nWeights = tf.Variable(tf.random_normal([in_size,out_size]))\n结构图符号及意义： 变量： 变量则可使用Tensorflow.histogram_summary()方法：\ntf.histogram_summary(layer_name\x2b\x26quot;\/weights\x26quot;,Weights) #name命名，Weights赋值  常量： 常量则可使用Tensorflow.scalar_summary()方法：\ntf.scalar_summary(\x27loss\x27,loss) #命名和赋值  展示： 最后需要整合和存储SummaryWriter：\n#合并到Summary中 merged = tf.merge_all_summaries() #选定可视化存储目录 writer = tf.train.SummaryWriter(\x26quot;\/目录\x26quot;,sess.graph)  merged也是需要run的，因此还需要：\nresult = sess.run(merged) #merged也是需要run的   writer.add_summary(result,i) 执行： 运行后，会在相应的目录里生成一个文件，执行：\ntensorboard --logdir=\x26quot;\/目录\x26quot;  会给出一段网址： 浏览器中打开这个网址即可，因为有兼容问题，firefox并不能很好的兼容，建议使用Chrome。\n常量在Event中，结构图在Graphs中，变量在最后两个Tag中。\n附项目代码：\nimport tensorflow as tf import numpy as np def add_layer(inputs,in_size,out_size,n_layer,activation_function=None): #activation_function=None线性函数 layer_name=\x26quot;layer%s\x26quot; % n_layer with tf.",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -175,7 +210,7 @@ Tensorboard：
 
 <p>节点一般是变量或常量，需要加一个“name=‘’”参数，才会展示和命名，如：</p>
 
-<p>with tf.name_scope(&lsquo;weights&rsquo;):<br />
+<p>with tf.name_scope('weights'):<br />
       Weights = tf.Variable(tf.random_normal([in_size,out_size]))</p>
 
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://upload-images.jianshu.io/upload_images/1070582-99ca84e75e677afb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure>

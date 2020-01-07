@@ -6,10 +6,21 @@
     <description>Recent content in thread on 静心明志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 May 2019 16:58:24 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 13:36:39 +0800</lastBuildDate>
     
 	<atom:link href="https://ottsion.github.io/tags/thread/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>1234asdfa</title>
+      <link>https://ottsion.github.io/2020/about1/</link>
+      <pubDate>Tue, 07 Jan 2020 13:36:39 +0800</pubDate>
+      
+      <guid>https://ottsion.github.io/2020/about1/</guid>
+      <description>test math
+$a_i = 150$
+$\frac{1}{34}$</description>
+    </item>
     
     <item>
       <title>方法超时放弃执行</title>

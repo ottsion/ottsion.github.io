@@ -11,6 +11,41 @@
   
   <link rel="prev" href="https://ottsion.github.io/2017/2017-05-11-logistic-regression/" />
   <link rel="next" href="https://ottsion.github.io/2017/2017-05-11-shengcheng-model-panding-model/" />
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
   <link rel="canonical" href="https://ottsion.github.io/2017/2017-05-11-linear-regression/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -46,7 +81,7 @@
     "articleSection" : "posts",
     "name" : "线性回归",
     "headline" : "线性回归",
-    "description" : "链接: 1. 线性回归总结 2. 正则化 3. 逻辑回归 4. Boosting 5. Adaboost算法\n一. 模型介绍 线性回归简而言之就是在平面中用一条直线去拟合一些点数据,在三维空间中就是用一个平面去拟合三维中的数据,而我们要做的就是寻找出一条最佳的线段或者平面去拟合数据,当然高维情况类似去寻找超平面。 初中的时候我们就学习过一元一次方程,那就是一个简单的拟合过程,只不过那个是完全可以拟合在一条线上,现在要做的是在有误差或者数据非线性排列的情况下,我们只能去尽力找出一条最佳的拟合线路:\nimport numpy as np import matplotlib.pyplot as plt x = np.arange(1,10,2).reshape(-1,1) y = a*2 plt.plot(x,y,\x27r-\x27,linewidth=2, label=u\x26quot;线性拟合\x26quot;) plt.plot(x,y, \x27bo\x27) plt.show()  import numpy as np import matplotlib.pyplot as plt from sklearn.linear_model import LinearRegression x = np.arange(1,10,2).reshape(-1,1) y = a*2 \x2b np.random.randn(5) linear_model = LinearRegression() linear_model.fit(x.reshape(-1, 1),y) y_pre = linear_model.predict(x) plt.plot(x,y_pre,\x27r-\x27,linewidth=2, label=u\x26quot;线性拟合\x26quot;) plt.plot(x,y, \x27bo\x27) plt.show()  定义一下一些符号表达，我们通常习惯用X=(x1,x2,\x26hellip;,xn)T∈ℝn×p表示数据矩阵，其中xi∈ℝp表示一个p维度长的数据样本；y=(y1,y2,\x26hellip;,yn)T∈ℝn表示数据的label，这里只考虑每个样本一类的情况。",
+    "description" : "链接: 1. 线性回归总结 2. 正则化 3. 逻辑回归 4. Boosting 5. Adaboost算法\n一. 模型介绍 线性回归简而言之就是在平面中用一条直线去拟合一些点数据,在三维空间中就是用一个平面去拟合三维中的数据,而我们要做的就是寻找出一条最佳的线段或者平面去拟合数据,当然高维情况类似去寻找超平面。 初中的时候我们就学习过一元一次方程,那就是一个简单的拟合过程,只不过那个是完全可以拟合在一条线上,现在要做的是在有误差或者数据非线性排列的情况下,我们只能去尽力找出一条最佳的拟合线路:\nimport numpy as np import matplotlib.pyplot as plt x = np.arange(1,10,2).reshape(-1,1) y = a*2 plt.plot(x,y,\x27r-\x27,linewidth=2, label=u\x26quot;线性拟合\x26quot;) plt.plot(x,y, \x27bo\x27) plt.show()  import numpy as np import matplotlib.pyplot as plt from sklearn.linear_model import LinearRegression x = np.arange(1,10,2).reshape(-1,1) y = a*2 \x2b np.random.randn(5) linear_model = LinearRegression() linear_model.fit(x.reshape(-1, 1),y) y_pre = linear_model.predict(x) plt.plot(x,y_pre,\x27r-\x27,linewidth=2, label=u\x26quot;线性拟合\x26quot;) plt.plot(x,y, \x27bo\x27) plt.show()  定义一下一些符号表达，我们通常习惯用X=(x1,x2,.",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -197,7 +232,7 @@ plt.show()
 
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://upload-images.jianshu.io/upload_images/1070582-29ac5417e759c672.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="线性回归;寻找最佳的拟合线段;(数据非线性情况下)" class="lazyload"><figcaption class="image-caption">线性回归;寻找最佳的拟合线段;(数据非线性情况下)</figcaption></figure></p>
 
-<p>定义一下一些符号表达，我们通常习惯用X=(x1,x2,&hellip;,xn)T∈ℝn×p表示数据矩阵，其中xi∈ℝp表示一个p维度长的数据样本；y=(y1,y2,&hellip;,yn)T∈ℝn表示数据的label，这里只考虑每个样本一类的情况。</p>
+<p>定义一下一些符号表达，我们通常习惯用X=(x1,x2,...,xn)T∈ℝn×p表示数据矩阵，其中xi∈ℝp表示一个p维度长的数据样本；y=(y1,y2,...,yn)T∈ℝn表示数据的label，这里只考虑每个样本一类的情况。</p>
 
 <p>线性回归的模型是这样的，对于一个样本xi，它的输出值是其特征的线性组合：</p>
 
@@ -241,7 +276,7 @@ plt.show()
 <p>在这里我们需要进行的是：
 <figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://upload-images.jianshu.io/upload_images/1070582-2d3453e9127d080f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="迭代公式" class="lazyload"><figcaption class="image-caption">迭代公式</figcaption></figure></p>
 
-<p>　　在批量梯度下降中，每一次参数更新都会遍历全部的训练数据{x1, y1}, {x2, y2}, &hellip; , {xm,ym}对于线性回归问题，这种方法可以得到一个全局最优解，但是当样本数据量很大的时候，会非常耗时。</p>
+<p>　　在批量梯度下降中，每一次参数更新都会遍历全部的训练数据{x1, y1}, {x2, y2}, ... , {xm,ym}对于线性回归问题，这种方法可以得到一个全局最优解，但是当样本数据量很大的时候，会非常耗时。</p>
 
 <h2 id="多项式回归">多项式回归</h2>
 
@@ -276,7 +311,7 @@ plt.show()
 
 <p>参考:
 <a href="http://blog.csdn.net/xbinworld/article/details/43919445" rel="nofollow noreferrer" target="_blank">机器学习方法：回归（一）：线性回归Linear regression</a>
-<a href="http://www.cnblogs.com/GuoJiaSheng/p/3928160.html" rel="nofollow noreferrer" target="_blank">机器学习&mdash;&ndash;线性回归浅谈（Linear Regression）</a>
+<a href="http://www.cnblogs.com/GuoJiaSheng/p/3928160.html" rel="nofollow noreferrer" target="_blank">机器学习-----线性回归浅谈（Linear Regression）</a>
 <a href="http://www.cnblogs.com/llhthinker/p/5248586.html" rel="nofollow noreferrer" target="_blank">Stanford机器学习笔记-1.线性回归</a>
 <a href="http://www.jianshu.com/p/0396cb1a471c" rel="nofollow noreferrer" target="_blank">线性回归</a></p>
 

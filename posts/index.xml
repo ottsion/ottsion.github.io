@@ -6,10 +6,21 @@
     <description>Recent content in Posts on 静心明志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 May 2019 17:37:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 13:36:39 +0800</lastBuildDate>
     
 	<atom:link href="https://ottsion.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>1234asdfa</title>
+      <link>https://ottsion.github.io/2020/about1/</link>
+      <pubDate>Tue, 07 Jan 2020 13:36:39 +0800</pubDate>
+      
+      <guid>https://ottsion.github.io/2020/about1/</guid>
+      <description>test math
+$a_i = 150$
+$\frac{1}{34}$</description>
+    </item>
     
     <item>
       <title>组合总和</title>
@@ -70,7 +81,7 @@ public static int rob(int[] nums) { int length = nums.</description>
       <pubDate>Thu, 09 May 2019 16:57:00 +0800</pubDate>
       
       <guid>https://ottsion.github.io/2019/%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</guid>
-      <description>给定 n 个非负整数 *a*1，*a*2，&amp;hellip;，*a*n，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
+      <description>给定 n 个非负整数 *a*1，*a*2，...，*a*n，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
 说明：你不能倾斜容器，且 n 的值至少为 2。
 图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。
 示例:
@@ -126,7 +137,7 @@ import java.util.concurrent.Callable; import java.util.concurrent.ExecutionExcep
 sudo apt-get install build-essential libgtk2.0-dev libvtk5-dev libjpeg-dev libtiff4-dev libjasper-dev libopenexr-dev libtbb-dev  三、安装 opencv 3.2：
  建立编译文件目录,并切换到该目录下：
 mkdir build cd build  开始编译(.. 为上层目录，不可缺少)：
-cmake .. make   ​ 如果遇到这样的错误：&amp;ndash; ICV: Downloading ippicv_linux_20151201.tgz&amp;hellip; CMake Error at 3rdparty/ippicv/downloader.cmake:73 (file): file DOWNLOAD HASH mismatch
+cmake .. make   ​ 如果遇到这样的错误：-- ICV: Downloading ippicv_linux_20151201.tgz... CMake Error at 3rdparty/ippicv/downloader.cmake:73 (file): file DOWNLOAD HASH mismatch
 ​ 去这里（点击打开链接）下载ippicv_linux_20151201.tgz 并粘贴（替换）到目录opencv-3.2.0/3rdparty/ippicv/downloads/Linux-808b791a6eac9ed78d32a7666804320e/
  make -j4 (-j4表示开启4个线程编译，取决于CPU的速度，比如我make -j7)
 make j4  安装：默认安装到 /usr/local 下
@@ -216,7 +227,7 @@ $[e_1,e_2,e_3]\begin{bmatrix}a_1\a_2\a_3\end{bmatrix}=[e_1^,e_2^,e_3^]\begin{bma
 左乘$\begin{bmatrix}e_1^T\e_2^T\e_3^T\end{bmatrix}$得到：
 $\begin{bmatrix}a_1\a_2\a_3\end{bmatrix}=\begin{bmatrix}e_1^Te_1^&amp;amp;e_1^Te_2^&amp;amp;e_1^Te_3^\\e_2^Te_1^&amp;amp;e_2^Te_2^&amp;amp;e_2^Te_3^\e_3^Te_1^&amp;amp;e_3^Te_2^&amp;amp;e_3^Te_3^\end{bmatrix}\begin{bmatrix}a_1^\a_2^\\a_3^\end{bmatrix}$
 其中上式中中间矩阵即为旋转矩阵(为特殊正交群)：
-$SO(n)=\left{R\in R^{n\times n}|RR_T=I,det&amp;reg;=1\right}​$
+$SO(n)=\left{R\in R^{n\times n}|RR_T=I,det(R)=1\right}​$
 二. 变换矩阵 对旋转加上平移：$a^`=Ra+t$ 这个表达式不适应于连乘，于是改写成下式：
 $\begin{bmatrix}a^`\1\end{bmatrix}=\begin{bmatrix}R&amp;amp;t\0^T&amp;amp;1\end{bmatrix}\triangleq{T}\begin{bmatrix}a\1\end{bmatrix}$
 这种结构的好处是可以连乘：$\tilde{b}=T_1\tilde{a}$,$\tilde{c}=T_2\tilde{b}$ ==&amp;gt;$\tilde{c}=T_2T_1\tilde{a}$
@@ -228,8 +239,8 @@ $T^{-1}=\begin{bmatrix}R^T&amp;amp;-R^Tt\0^T&amp;amp;1\end{bmatrix}$
 方向为旋转轴、长度为转过的角度：$w=\theta n$
 角轴与旋转矩阵的不同:
  旋转矩阵：九个量，有正交性约束和行列式值约束 角轴：三个量，没有约束 注意它们只是表达方式的不同，但表达的东西可以是同一个 角轴也就是第四章要介绍的李代数  转换关系：
- 轴角转旋转矩阵：罗德里格斯公式（Rodrigues&amp;rsquo;s Formula ）：  $R=\cos\theta I+(1-\cos\theta)nn^T+\sin\theta\hat{n}$
- 旋转矩阵转轴角：  角度：$\theta=\arccos(\frac{tr&amp;reg;-1}{2})$</description>
+ 轴角转旋转矩阵：罗德里格斯公式（Rodrigues&#39;s Formula ）：  $R=\cos\theta I+(1-\cos\theta)nn^T+\sin\theta\hat{n}$
+ 旋转矩阵转轴角：  角度：$\theta=\arccos(\frac{tr(R)-1}{2})$</description>
     </item>
     
     <item>
@@ -311,7 +322,7 @@ rostopic echo /joint_states &amp;gt; record2.txt
 转自：原地址 提升方法（boosting）是一种常用的统计学习方法，应用广泛且有效。在分类问题中，它通过改变训练样本的权重，学习多个分类器，并将这些分类器进行线性组合，提高分类的性能。 本章首先介绍提升方法的思路和代表性的提升算法AdaBoost，然后通过训练误差分析探讨AdaBoost为什么能够提高学习精度，并且从前向分布加法模型的角度解释AdaBoost，最后叙述提升方法更具体的事例——提升术（boosting tree）。AdaBoost算法是1995年由Freund和Schapire提出的，提升树是2000年由Friedman等人提出的。（开头几段内容来自《统计学习方法》） Adaboost算法基本原理
 提升方法的基本思路 提升方法是基于这样一种思想：对于一个复杂任务来说，将多个专家的判断进行适当的综合所得出的判断，要比其中任何一个专家单独的判断好。通俗点说，就是”三个臭皮匠顶个诸葛亮”。 Leslie Valiant首先提出了“强可学习（strongly learnable）”和”弱可学习（weakly learnable）”的概念，并且指出：在概率近似正确（probably approximately correct, PAC）学习的框架中，一个概念（一个类），如果存在一个多项式的学习算法能够学习它，并且正确率很高，那么就称这个概念是强可学习的，如果正确率不高，仅仅比随即猜测略好，那么就称这个概念是弱可学习的。2010年的图灵奖给了L. Valiant，以表彰他的PAC理论 。非常有趣的是Schapire后来证明强可学习与弱可学习是等价的，也就是说，在PAC学习的框架下，一个概念是强可学习的充要条件是这个概念是可学习的。 这样一来，问题便成为，在学习中，如果已经发现了“弱学习算法”，那么能否将它提升（boost）为”强学习算法”。大家知道，发现弱学习算法通常比发现强学习算法容易得多。那么如何具体实施提升，便成为开发提升方法时所要解决的问题。关于提升方法的研究很多，有很多算法被提出。最具代表性的是AdaBoost算法（Adaptive Boosting Algorithm），可以说，AdaBoost实现了PAC的理想。 对于分类问题而言，给定一个训练数据，求一个比较粗糙的分类器（即弱分类器）要比求一个精确的分类器（即强分类器）容易得多。提升方法就是从弱学习算法出发，反复学习，得到一系列弱分类器，然后组合这些弱分类器，构成一个强分类器。大多数的提升方法都是改变训练数据的概率分布（训练数据中的各个数据点的权值分布），调用弱学习算法得到一个弱分类器，再改变训练数据的概率分布，再调用弱学习算法得到一个弱分类器，如此反复，得到一系列弱分类器。 这样，对于提升方法来说，有两个问题需要回答：一是在每一轮如何如何改变训练数据的概率分布；而是如何将多个弱分类器组合成一个强分类器。 关于第一个问题，AdaBoost的做法是，提高那些被前几轮弱分类器线性组成的分类器错误分类的的样本的权值。这样一来，那些没有得到正确分类的数据，由于权值加大而受到后一轮的弱分类器的更大关注。于是，分类问题被一系列的弱分类器”分而治之”。至于第二个问题，AdaBoost采取加权多数表决的方法。具体地，加大分类误差率小的弱分类器的权值，使其在表决中起较大的作用，减小分类误差率大的弱分类器的权值，使其在表决中起较小的作用。 AdaBoost的巧妙之处就在于它将这些想法自然而然且有效地实现在一种算法里。
 AdaBoost算法 输入：训练数据集T={(x1,y1),(x2,y2),…,(xN,yN)}，其中xi∈X⊆Rn，表示输入数据，yi∈Y={-1,+1}，表示类别标签；弱学习算法。 输出：最终分类器G(x)。 流程： 初始化训练数据的概率分布，刚开始为均匀分布
-D1=(w11,w12,…,w1N), 其中w1i= , i=1,2,..,N . Dm表示在第m轮迭代开始前，训练数据的概率分布（或权值分布），wmi表示在第i个样本的权值， 。对m=1,2,…,M，使用具有权值分布Dm的训练数据集进行学习（任意选一种模型都可以，例如朴素贝叶斯，决策树，SVM等，并且每一轮迭代都可以用不同的模型），得到一个弱分类器 计算Gm(x)在训练数据集上的分类误差率 计算弱分类器Gm(x)的系数 更新训练数据的权值分布 这里，Zm是规范化因子 这样 ，它使Dm+1称为一个概率分布。将M个基本分类器进行线性组合 得到最终分类器 对AdaBoost算法作如下说明： 步骤(1) 初始时假设训练数据集具有均匀分布，即每个训练样本在弱分类器的学习中作用相同。 步骤(2) &amp;copy; αm表示Gm(x)在最终分类器中的重要性。由式(公式 2)可知，当em ≤1/2时，αm≥0，并且αm随着em的减小而增大，即意味着误差率越小的基本分类器在最终分类器中的作用越大。 (d) 式可以写成： 由此可知，被弱分类器Gm(x)误分类的样本的权值得以扩大，而被正确分类的样本的权值得以缩小。因此误分类样本在下一轮学习中起到更大的作用。不改变所给的训练数据，而不断改变训练数据权值的分布，使得训练数据在基本分类器的学习中起不同的作用，这是AdaBoost的一个特点。 步骤(3) 这里，αm之和并不等于1。f(x)的符号决定实例x的类别，f(x)的绝对值表示分类的确信度。利用基本分类器进行线性组合得到最终分类器是AdaBoost的另一个特点。
+D1=(w11,w12,…,w1N), 其中w1i= , i=1,2,..,N . Dm表示在第m轮迭代开始前，训练数据的概率分布（或权值分布），wmi表示在第i个样本的权值， 。对m=1,2,…,M，使用具有权值分布Dm的训练数据集进行学习（任意选一种模型都可以，例如朴素贝叶斯，决策树，SVM等，并且每一轮迭代都可以用不同的模型），得到一个弱分类器 计算Gm(x)在训练数据集上的分类误差率 计算弱分类器Gm(x)的系数 更新训练数据的权值分布 这里，Zm是规范化因子 这样 ，它使Dm+1称为一个概率分布。将M个基本分类器进行线性组合 得到最终分类器 对AdaBoost算法作如下说明： 步骤(1) 初始时假设训练数据集具有均匀分布，即每个训练样本在弱分类器的学习中作用相同。 步骤(2) (c) αm表示Gm(x)在最终分类器中的重要性。由式(公式 2)可知，当em ≤1/2时，αm≥0，并且αm随着em的减小而增大，即意味着误差率越小的基本分类器在最终分类器中的作用越大。 (d) 式可以写成： 由此可知，被弱分类器Gm(x)误分类的样本的权值得以扩大，而被正确分类的样本的权值得以缩小。因此误分类样本在下一轮学习中起到更大的作用。不改变所给的训练数据，而不断改变训练数据权值的分布，使得训练数据在基本分类器的学习中起不同的作用，这是AdaBoost的一个特点。 步骤(3) 这里，αm之和并不等于1。f(x)的符号决定实例x的类别，f(x)的绝对值表示分类的确信度。利用基本分类器进行线性组合得到最终分类器是AdaBoost的另一个特点。
 AdaBoost的例子 例 1 给定如表 1所示训练数据。假设弱分类器由G(x)=sign(x-v)产生，其中v为常量，表示阀值。试用AdaBoost算法学习一个强分类器。 表 1 训练数据样本</description>
     </item>
     
@@ -323,7 +334,7 @@ AdaBoost的例子 例 1 给定如表 1所示训练数据。假设弱分类器由
       <guid>https://ottsion.github.io/2017/2017-05-11-boosting/</guid>
       <description>链接: 1. 线性回归总结 2. 正则化 3. 逻辑回归 4. Boosting 5. Adaboost算法
 模型来源 提升算法是常用的有效的统计学习算法，属于迭代算法，它通过不断地使用一个弱学习器弥补前一个弱学习器的“不足”的过程，来串行地构造一个较强的学习器，这个强学习器能够使目标函数值足够小。从优化的角度分析，与一般的在参数空间搜索最优解的学习算法（如神经网络）类似，Boosting也是一个迭代搜索，且最优的算法，不同的是，它的搜索空间是学习器空间，或说函数空间（Function space），它的搜索方向是构造不断完善的强学习器，以达到目标函数（或说误差函数）足够小的目的。 Bagging也是一种常用的统计学习方法，两者经常放在一起对比，它们不同的是，Bagging将在Bootstrap采样得到的不同训练子集上的弱学习器的结果综合考虑，各个弱学习器的构建过程是并行的。而Boosting是通过串行地不断迭加弱学习器形成一个强学习器，是学习模型的提升过程。此外，Boosting迭代在降低训练误差的同时，使模型预测的确信度（margin）不断提高，是它获得较好泛化能力的主要原因，而Bagging主要是通过平均来降低模型的方差(variation).
-example 为说明Boosting的主要过程，下面举一个简化的例子。 假设训练数据集为(x1,y1),(x2,y2),&amp;hellip;,(xn,yn)我们的任务是寻找使这个回归问题的均方误差最小的模型F(x). 如果已经有一个初始的模型f,且f(x1)=0.8,但y1=0.9 ,f(x2)=1.4,但y2=1.3 …显然f是不完美的，我们可以采用不断完善f的方式,如不断在f的基础上增加模型（如决策树）h,即：f(x)←f(x)+h(x),使f 趋于F. 我们希望： f(x1)+h(x1)=y1 ====&amp;gt; h(x1)=y1−f(x1) f(x2)+h(x2)=y2 ====&amp;gt; h(x2)=y2−f(x2) ... ====&amp;gt; ... f(xn)+h(xn)=yn ====&amp;gt; h(xn)=yn−f(xn)  然而恰好满足上式的h可能不存在，但我们总可以找到使残差yi−f(xi)变小的h. 上述过程等价于拟合如下数据集：
+example 为说明Boosting的主要过程，下面举一个简化的例子。 假设训练数据集为(x1,y1),(x2,y2),...,(xn,yn)我们的任务是寻找使这个回归问题的均方误差最小的模型F(x). 如果已经有一个初始的模型f,且f(x1)=0.8,但y1=0.9 ,f(x2)=1.4,但y2=1.3 …显然f是不完美的，我们可以采用不断完善f的方式,如不断在f的基础上增加模型（如决策树）h,即：f(x)←f(x)+h(x),使f 趋于F. 我们希望： f(x1)+h(x1)=y1 ====&amp;gt; h(x1)=y1−f(x1) f(x2)+h(x2)=y2 ====&amp;gt; h(x2)=y2−f(x2) ... ====&amp;gt; ... f(xn)+h(xn)=yn ====&amp;gt; h(xn)=yn−f(xn)  然而恰好满足上式的h可能不存在，但我们总可以找到使残差yi−f(xi)变小的h. 上述过程等价于拟合如下数据集：
 (x1,y1−f(x1)) (x2,y2−f(x2)) ... (xn,yn−f(xn))  上述一次叠加h的过程就是Boosting的一次迭代。要使f足够接近F一般需要多次迭代。
 依据损失函数的不同具体分类有：
 链接:关于AdaBoost的算法推导
@@ -380,7 +391,7 @@ def rnn_cell.DropoutWrapper(rnn_cell, input_keep_prob=1.0, output_keep_prob=1.0)
       <description>来源：Tensorflow 自带可视化Tensorboard使用方法 附项目代码 Tensorboard： 如何更直观的观察数据在神经网络中的变化，或是已经构建的神经网络的结构。上一篇文章说到，可以使用matplotlib第三方可视化，来进行一定程度上的可视化。然而Tensorflow也自带了可视化模块Tensorboard，并且能更直观的看见整个神经网络的结构。 上面的结构图甚至可以展开，变成： 使用： 结构图：
  with tensorflow .name_scope(layer_name):  直接使用以上代码生成一个带可展开符号的一个域，并且支持嵌套操作：
 with tf.name_scope(layer_name): with tf.name_scope(&#39;weights&#39;):  节点一般是变量或常量，需要加一个“name=‘’”参数，才会展示和命名，如：
-with tf.name_scope(&amp;lsquo;weights&amp;rsquo;):
+with tf.name_scope(&#39;weights&#39;):
 Weights = tf.Variable(tf.random_normal([in_size,out_size]))
 结构图符号及意义： 变量： 变量则可使用Tensorflow.histogram_summary()方法：
 tf.histogram_summary(layer_name+&amp;quot;/weights&amp;quot;,Weights) #name命名，Weights赋值  常量： 常量则可使用Tensorflow.scalar_summary()方法：
@@ -435,7 +446,7 @@ tf.nn.relu() tf.nn.sigmoid() tf.nn.tanh() tf.nn.elu() tf.nn.bias_add() tf.nn.cre
       <description>原文 决策树是一种树形结构，其中每一个内部节点表示在一个特征（属性）上的测试，每个分支代表一个测试输出，每个叶子节点代表一种类别。 决策树学习是一种归纳学习，从一堆数据中归纳出一个学习模型出来。决策树学习采用的是自顶向下的递归学习，其基本思想是以信息熵为度量构造一棵熵值下降最快的树，树不断构建的过程也就是熵不断下降的过程。而其中节点的具体特征选择取决于哪个特征在当前节点的熵下降最快（如在构建根节点的时候，比较了年龄、长相、收入、是否公务员这些特征，发现选择年龄这一特征会导致熵下降最快，于是选择年龄作为根节点）。以此类推，到了叶子节点处的熵值即为零。至于说具体如何比较及计算熵下降的程度，稍后会给出。
 决策树的优缺点 决策树算法的最大优点是：它可以自学习。在学习的过程中，不需要使用者了解过多背景知识，只需要对训练实例进行较好的标注，就能够进行学习。像之前的”是否出去玩”例子，只要给定一个表格，并且每一列（最后一列是标注列）都给定（并不需要知道每一列表示的含义），那么决策树就会自己构造出一种基于规则的决策算法。 决策树缺点：可以看出，决策树的决策过程实质上是贪心法，在每一步的时候都选择当前状态下的最优解，一直走下去。我们知道贪心法并不能保证得到的最终结果是全局最优的，这也是决策树的缺陷之一，有可能会导致过拟合的问题.
 知识点补充： ## 经验熵与经验条件熵 只要给定一个随机变量P，我们就可以求得该随机变量的熵。但是实践中，我们得到的并不是真正的随机变量p，得到的只是p的若干采样，那么我们实践中得到的熵就不一定是真正的随机变量p的熵，于是，我们称实践中得到的熵为经验熵，类似地也就有了经验条件熵的概念。教科书上的表述：当熵和条件熵中的概率是由数据估计得到时，所对应的熵和条件熵分别称为经验熵和经验条件熵。
-决策树的生成算法&amp;ndash;ID3、C4.5、CART 建立决策树的关键，是在当前状态下选择哪个特征（即属性）作为节点。之前已经讲过，选择节点的依据取决于哪个特征在当前节点的熵下降最快。那么给出了一堆数据，那么如何求每个特征的熵（或熵下降的程度）呢？根据不同的目标函数，决策树算法主要有三种算法：ID3、C4.5、CART。</description>
+决策树的生成算法--ID3、C4.5、CART 建立决策树的关键，是在当前状态下选择哪个特征（即属性）作为节点。之前已经讲过，选择节点的依据取决于哪个特征在当前节点的熵下降最快。那么给出了一堆数据，那么如何求每个特征的熵（或熵下降的程度）呢？根据不同的目标函数，决策树算法主要有三种算法：ID3、C4.5、CART。</description>
     </item>
     
     <item>
@@ -528,7 +539,7 @@ L2范数 L2范数是指向量各元素的平方和然后求平方根。我们让
 例如我们有以下(x,y)形式的数据：(1,0), (1,0), (2,0), (2, 1)
 那么p(x,y)是：
  y=0 y=1
- &amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;
+ -----------
  x=1 | 1/2 0</description>
     </item>
     
@@ -540,7 +551,7 @@ L2范数 L2范数是指向量各元素的平方和然后求平方根。我们让
       <guid>https://ottsion.github.io/2017/2017-05-11-linear-regression/</guid>
       <description>链接: 1. 线性回归总结 2. 正则化 3. 逻辑回归 4. Boosting 5. Adaboost算法
 一. 模型介绍 线性回归简而言之就是在平面中用一条直线去拟合一些点数据,在三维空间中就是用一个平面去拟合三维中的数据,而我们要做的就是寻找出一条最佳的线段或者平面去拟合数据,当然高维情况类似去寻找超平面。 初中的时候我们就学习过一元一次方程,那就是一个简单的拟合过程,只不过那个是完全可以拟合在一条线上,现在要做的是在有误差或者数据非线性排列的情况下,我们只能去尽力找出一条最佳的拟合线路:
-import numpy as np import matplotlib.pyplot as plt x = np.arange(1,10,2).reshape(-1,1) y = a*2 plt.plot(x,y,&#39;r-&#39;,linewidth=2, label=u&amp;quot;线性拟合&amp;quot;) plt.plot(x,y, &#39;bo&#39;) plt.show()  import numpy as np import matplotlib.pyplot as plt from sklearn.linear_model import LinearRegression x = np.arange(1,10,2).reshape(-1,1) y = a*2 + np.random.randn(5) linear_model = LinearRegression() linear_model.fit(x.reshape(-1, 1),y) y_pre = linear_model.predict(x) plt.plot(x,y_pre,&#39;r-&#39;,linewidth=2, label=u&amp;quot;线性拟合&amp;quot;) plt.plot(x,y, &#39;bo&#39;) plt.show()  定义一下一些符号表达，我们通常习惯用X=(x1,x2,&amp;hellip;,xn)T∈ℝn×p表示数据矩阵，其中xi∈ℝp表示一个p维度长的数据样本；y=(y1,y2,&amp;hellip;,yn)T∈ℝn表示数据的label，这里只考虑每个样本一类的情况。</description>
+import numpy as np import matplotlib.pyplot as plt x = np.arange(1,10,2).reshape(-1,1) y = a*2 plt.plot(x,y,&#39;r-&#39;,linewidth=2, label=u&amp;quot;线性拟合&amp;quot;) plt.plot(x,y, &#39;bo&#39;) plt.show()  import numpy as np import matplotlib.pyplot as plt from sklearn.linear_model import LinearRegression x = np.arange(1,10,2).reshape(-1,1) y = a*2 + np.random.randn(5) linear_model = LinearRegression() linear_model.fit(x.reshape(-1, 1),y) y_pre = linear_model.predict(x) plt.plot(x,y_pre,&#39;r-&#39;,linewidth=2, label=u&amp;quot;线性拟合&amp;quot;) plt.plot(x,y, &#39;bo&#39;) plt.show()  定义一下一些符号表达，我们通常习惯用X=(x1,x2,.</description>
     </item>
     
     <item>

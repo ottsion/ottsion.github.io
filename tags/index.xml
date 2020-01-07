@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 静心明志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 May 2019 17:37:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 13:36:39 +0800</lastBuildDate>
     
 	<atom:link href="https://ottsion.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>java</title>
+      <link>https://ottsion.github.io/tags/java/</link>
+      <pubDate>Tue, 07 Jan 2020 13:36:39 +0800</pubDate>
+      
+      <guid>https://ottsion.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thread</title>
+      <link>https://ottsion.github.io/tags/thread/</link>
+      <pubDate>Tue, 07 Jan 2020 13:36:39 +0800</pubDate>
+      
+      <guid>https://ottsion.github.io/tags/thread/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>algorithm</title>
@@ -17,15 +35,6 @@
       <pubDate>Fri, 24 May 2019 17:37:20 +0800</pubDate>
       
       <guid>https://ottsion.github.io/tags/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>java</title>
-      <link>https://ottsion.github.io/tags/java/</link>
-      <pubDate>Fri, 24 May 2019 17:37:20 +0800</pubDate>
-      
-      <guid>https://ottsion.github.io/tags/java/</guid>
       <description></description>
     </item>
     
@@ -62,15 +71,6 @@
       <pubDate>Wed, 08 May 2019 14:01:43 +0800</pubDate>
       
       <guid>https://ottsion.github.io/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>thread</title>
-      <link>https://ottsion.github.io/tags/thread/</link>
-      <pubDate>Sun, 05 May 2019 16:58:24 +0800</pubDate>
-      
-      <guid>https://ottsion.github.io/tags/thread/</guid>
       <description></description>
     </item>
     

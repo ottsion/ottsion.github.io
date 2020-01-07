@@ -6,10 +6,19 @@
     <description>Recent content in Categories on 静心明志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 May 2019 17:37:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 13:36:39 +0800</lastBuildDate>
     
 	<atom:link href="https://ottsion.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java</title>
+      <link>https://ottsion.github.io/categories/java/</link>
+      <pubDate>Tue, 07 Jan 2020 13:36:39 +0800</pubDate>
+      
+      <guid>https://ottsion.github.io/categories/java/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>algorithm</title>
@@ -35,15 +44,6 @@
       <pubDate>Wed, 08 May 2019 14:18:53 +0800</pubDate>
       
       <guid>https://ottsion.github.io/categories/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://ottsion.github.io/categories/java/</link>
-      <pubDate>Sun, 05 May 2019 16:58:24 +0800</pubDate>
-      
-      <guid>https://ottsion.github.io/categories/java/</guid>
       <description></description>
     </item>
     

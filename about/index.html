@@ -11,6 +11,41 @@
   
   
   
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
   <link rel="canonical" href="https://ottsion.github.io/about/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -46,7 +81,7 @@
     "articleSection" : "",
     "name" : "",
     "headline" : "",
-    "description" : "Continue\x26hellip;\nGithub [1] pioneer_need: 先锋机器人pioneer运行所需的一些配置\n[2] deeplite: 我的深度学习库，里面包含NLP, CTR, CV方面的模型，可以直接通过配置文件配置dataloader运行\n[3] ImageClassification: 针对样本量太少，通过相似任务迁移的图片分类代码\n[4] JData: 京东JData算法大赛-高潜用户购买意向预测",
+    "description" : "Continue...\nGithub [1] pioneer_need: 先锋机器人pioneer运行所需的一些配置\n[2] deeplite: 我的深度学习库，里面包含NLP, CTR, CV方面的模型，可以直接通过配置文件配置dataloader运行\n[3] ImageClassification: 针对样本量太少，通过相似任务迁移的图片分类代码\n[4] JData: 京东JData算法大赛-高潜用户购买意向预测",
     "inLanguage" : "en-us",
     "author" : "Fengcai.Sun",
     "creator" : "Fengcai.Sun",
@@ -125,7 +160,7 @@
     <div class="post-content">
         
 
-<p>Continue&hellip;</p>
+<p>Continue...</p>
 
 <h3 id="github">Github</h3>
 

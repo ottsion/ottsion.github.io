@@ -52,7 +52,7 @@ def rnn_cell.DropoutWrapper(rnn_cell, input_keep_prob=1.0, output_keep_prob=1.0)
       <description>来源：Tensorflow 自带可视化Tensorboard使用方法 附项目代码 Tensorboard： 如何更直观的观察数据在神经网络中的变化，或是已经构建的神经网络的结构。上一篇文章说到，可以使用matplotlib第三方可视化，来进行一定程度上的可视化。然而Tensorflow也自带了可视化模块Tensorboard，并且能更直观的看见整个神经网络的结构。 上面的结构图甚至可以展开，变成： 使用： 结构图：
  with tensorflow .name_scope(layer_name):  直接使用以上代码生成一个带可展开符号的一个域，并且支持嵌套操作：
 with tf.name_scope(layer_name): with tf.name_scope(&#39;weights&#39;):  节点一般是变量或常量，需要加一个“name=‘’”参数，才会展示和命名，如：
-with tf.name_scope(&amp;lsquo;weights&amp;rsquo;):
+with tf.name_scope(&#39;weights&#39;):
 Weights = tf.Variable(tf.random_normal([in_size,out_size]))
 结构图符号及意义： 变量： 变量则可使用Tensorflow.histogram_summary()方法：
 tf.histogram_summary(layer_name+&amp;quot;/weights&amp;quot;,Weights) #name命名，Weights赋值  常量： 常量则可使用Tensorflow.scalar_summary()方法：

@@ -11,6 +11,41 @@
   
   <link rel="prev" href="https://ottsion.github.io/2016/2016-12-26-cmake-1/" />
   <link rel="next" href="https://ottsion.github.io/2017/2017-01-05-lunwen2/" />
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
   <link rel="canonical" href="https://ottsion.github.io/2017/2017-01-04-eigen-use-1/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -298,7 +333,7 @@ here is the vector v:
 
 <h2 id="设置矩阵的元素">设置矩阵的元素</h2>
 
-<p>在Eigen中重载了&rdquo;&lt;&lt;&ldquo;操作符，通过该操作符即可以一个一个元素的进行赋值，也可以一块一块的赋值。另外也可以使用下标进行复制。
+<p>在Eigen中重载了&quot;&lt;&lt;&quot;操作符，通过该操作符即可以一个一个元素的进行赋值，也可以一块一块的赋值。另外也可以使用下标进行复制。
 第一段代码：</p>
 
 <pre><code>Matrix3f m; 

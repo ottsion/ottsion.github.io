@@ -11,6 +11,41 @@
   
   <link rel="prev" href="https://ottsion.github.io/2016/2016-12-21-how-to-use-git/" />
   <link rel="next" href="https://ottsion.github.io/2017/2017-01-04-eigen-use-1/" />
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
   <link rel="canonical" href="https://ottsion.github.io/2016/2016-12-26-cmake-1/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -291,7 +326,7 @@ ADD_EXECUTABLE(hello main.c)
 1.变量使用${}方式取值,但是在IF控制语句中是直接使用变量名</p>
 
 <ol>
-<li><p>指令(参数 1 参数 2&hellip;)
+<li><p>指令(参数 1 参数 2...)
 参数使用括弧括起,参数之间使用空格或分号分开。
 以上面的 ADD_EXECUTABLE 指令为例,如果存在另外一个 func.c 源文件,就要写成
 <code>ADD_EXECUTABLE(hello main.c  func.c)</code>   或者 <code>ADD_EXECUTABLE(hello main.c;func.c)</code></p></li>

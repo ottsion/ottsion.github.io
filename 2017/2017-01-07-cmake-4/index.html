@@ -11,6 +11,41 @@
   
   <link rel="prev" href="https://ottsion.github.io/2017/2017-01-05-eigen-code/" />
   <link rel="next" href="https://ottsion.github.io/2017/2017-01-07-cmake-3/" />
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
   <link rel="canonical" href="https://ottsion.github.io/2017/2017-01-07-cmake-4/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -290,7 +325,7 @@ libc.so.6 =&gt; /lib/libc.so.6 (0xb7e3a000)
 
 <h2 id="特殊的环境变量-cmake-include-path-和-cmake-library-path">特殊的环境变量 CMAKE_INCLUDE_PATH 和 CMAKE_LIBRARY_PATH</h2>
 
-<p>务必注意,这两个是环境变量而不是 cmake 变量。使用方法是要在 bash 中用 export 或者在 csh 中使用 set 命令设置或者CMAKE_INCLUDE_PATH=/home/include cmake ..等方式。这两个变量主要是用来解决以前 autotools 工程中&ndash;extra-include-dir 等参数的支持的。也就是,如果头文件没有存放在常规路径(/usr/include, /usr/local/include 等),则可以通过这些变量就行弥补。我们以本例中的 hello.h 为例,它存放在/usr/include/hello 目录,所以直接查找肯定是找不到的。前面我们直接使用了绝对路径 INCLUDE_DIRECTORIES(/usr/include/hello)告诉工程这个头文件目录。为了将程序更智能一点,我们可以使用 CMAKE_INCLUDE_PATH 来进行,使用 bash 的方法
+<p>务必注意,这两个是环境变量而不是 cmake 变量。使用方法是要在 bash 中用 export 或者在 csh 中使用 set 命令设置或者CMAKE_INCLUDE_PATH=/home/include cmake ..等方式。这两个变量主要是用来解决以前 autotools 工程中--extra-include-dir 等参数的支持的。也就是,如果头文件没有存放在常规路径(/usr/include, /usr/local/include 等),则可以通过这些变量就行弥补。我们以本例中的 hello.h 为例,它存放在/usr/include/hello 目录,所以直接查找肯定是找不到的。前面我们直接使用了绝对路径 INCLUDE_DIRECTORIES(/usr/include/hello)告诉工程这个头文件目录。为了将程序更智能一点,我们可以使用 CMAKE_INCLUDE_PATH 来进行,使用 bash 的方法
 如下:</p>
 
 <pre><code>export CMAKE_INCLUDE_PATH=/usr/include/hello

@@ -11,6 +11,41 @@
   
   <link rel="prev" href="https://ottsion.github.io/2017/2017-06-17-ros-kinectv2-setup/" />
   <link rel="next" href="https://ottsion.github.io/2017/2017-06-22-3d-gangti-yundong/" />
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
   <link rel="canonical" href="https://ottsion.github.io/2017/2017-06-20-ros-dynamixel/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -208,7 +243,7 @@ USB2Dynamixel连接USB接口，舵机连接USB2DYnamixel接口，舵机外部供
 <p>rostopic list</p>
 </blockquote>
 
-<p>出现&ndash;&gt; /motor_states/pan_tilt_port 则连接成功</p>
+<p>出现--&gt; /motor_states/pan_tilt_port 则连接成功</p>
 
 <h1 id="5-设置舵机驱动文件">5 设置舵机驱动文件</h1>
 
@@ -275,8 +310,8 @@ rostopic list</p>
 <h1 id="7-控制舵机">7 控制舵机</h1>
 
 <blockquote>
-<p>rostopic pub /pan_controller/command std_msgs/Float64 &ndash; 1.5
-rostopic pub /tilt_controller/command std_msgs/Float64 &ndash; 1.5</p>
+<p>rostopic pub /pan_controller/command std_msgs/Float64 -- 1.5
+rostopic pub /tilt_controller/command std_msgs/Float64 -- 1.5</p>
 </blockquote>
 
     </div>

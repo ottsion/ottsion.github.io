@@ -86,7 +86,7 @@
 例如我们有以下(x,y)形式的数据：(1,0), (1,0), (2,0), (2, 1)
 那么p(x,y)是：
  y=0 y=1
- &amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;
+ -----------
  x=1 | 1/2 0</description>
     </item>
     

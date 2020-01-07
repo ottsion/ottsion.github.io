@@ -94,7 +94,7 @@ $[e_1,e_2,e_3]\begin{bmatrix}a_1\a_2\a_3\end{bmatrix}=[e_1^,e_2^,e_3^]\begin{bma
 左乘$\begin{bmatrix}e_1^T\e_2^T\e_3^T\end{bmatrix}$得到：
 $\begin{bmatrix}a_1\a_2\a_3\end{bmatrix}=\begin{bmatrix}e_1^Te_1^&amp;amp;e_1^Te_2^&amp;amp;e_1^Te_3^\\e_2^Te_1^&amp;amp;e_2^Te_2^&amp;amp;e_2^Te_3^\e_3^Te_1^&amp;amp;e_3^Te_2^&amp;amp;e_3^Te_3^\end{bmatrix}\begin{bmatrix}a_1^\a_2^\\a_3^\end{bmatrix}$
 其中上式中中间矩阵即为旋转矩阵(为特殊正交群)：
-$SO(n)=\left{R\in R^{n\times n}|RR_T=I,det&amp;reg;=1\right}​$
+$SO(n)=\left{R\in R^{n\times n}|RR_T=I,det(R)=1\right}​$
 二. 变换矩阵 对旋转加上平移：$a^`=Ra+t$ 这个表达式不适应于连乘，于是改写成下式：
 $\begin{bmatrix}a^`\1\end{bmatrix}=\begin{bmatrix}R&amp;amp;t\0^T&amp;amp;1\end{bmatrix}\triangleq{T}\begin{bmatrix}a\1\end{bmatrix}$
 这种结构的好处是可以连乘：$\tilde{b}=T_1\tilde{a}$,$\tilde{c}=T_2\tilde{b}$ ==&amp;gt;$\tilde{c}=T_2T_1\tilde{a}$
@@ -106,8 +106,8 @@ $T^{-1}=\begin{bmatrix}R^T&amp;amp;-R^Tt\0^T&amp;amp;1\end{bmatrix}$
 方向为旋转轴、长度为转过的角度：$w=\theta n$
 角轴与旋转矩阵的不同:
  旋转矩阵：九个量，有正交性约束和行列式值约束 角轴：三个量，没有约束 注意它们只是表达方式的不同，但表达的东西可以是同一个 角轴也就是第四章要介绍的李代数  转换关系：
- 轴角转旋转矩阵：罗德里格斯公式（Rodrigues&amp;rsquo;s Formula ）：  $R=\cos\theta I+(1-\cos\theta)nn^T+\sin\theta\hat{n}$
- 旋转矩阵转轴角：  角度：$\theta=\arccos(\frac{tr&amp;reg;-1}{2})$</description>
+ 轴角转旋转矩阵：罗德里格斯公式（Rodrigues&#39;s Formula ）：  $R=\cos\theta I+(1-\cos\theta)nn^T+\sin\theta\hat{n}$
+ 旋转矩阵转轴角：  角度：$\theta=\arccos(\frac{tr(R)-1}{2})$</description>
     </item>
     
     <item>

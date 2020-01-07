@@ -11,6 +11,41 @@
   
   <link rel="prev" href="https://ottsion.github.io/2016/2016-12-21-kalman-filter/" />
   <link rel="next" href="https://ottsion.github.io/2016/2016-12-21-how-to-use-git/" />
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
   <link rel="canonical" href="https://ottsion.github.io/2016/2016-12-21-harris-feature-detect/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -226,7 +261,7 @@
 <li>trace(M) = \lambda<em>{1}+\lambda</em>{2}</li>
 </ol>
 
-<p>一个窗口，它的分数 R 大于一个特定值，这个窗口就可以被认为是&rdquo;角点&rdquo;</p>
+<p>一个窗口，它的分数 R 大于一个特定值，这个窗口就可以被认为是&quot;角点&quot;</p>
 
 <h2 id="效果演示代码">效果演示代码</h2>
 
@@ -306,7 +341,7 @@ void cornerHarris_demo(int, void*)
 
 <p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://i.imgur.com/LKGaXrj.png" alt="结果2" class="lazyload"><figcaption class="image-caption">结果2</figcaption></figure></p>
 
-<p>后续慢慢加入详解&hellip;.</p>
+<p>后续慢慢加入详解....</p>
 
 <p>学习来源：</p>
 
