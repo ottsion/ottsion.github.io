@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : "tensorflow--各种损失函数",
     "headline" : "tensorflow--各种损失函数",
-    "description" : "来源：tensorflow学习笔记（三）：损失函数\nsparse_softmax_cross_entropy_with_logits tf.python.ops.nn_ops.sparse_softmax_cross_entropy_with_logits(logits, labels, name=None)\ndef sparse_softmax_cross_entropy_with_logits(logits, labels, name=None): #logits是最后一层的z（输入） #A common use case is to have logits of shape `[batch_size, num_classes]` and #labels of shape `[batch_size]`. But higher dimensions are supported. #Each entry in `labels` must be an index in `[0, num_classes)` #输出：loss [batch_size]  softmax_cross_entropy_with_logits tf.python.ops.nn_ops.softmax_cross_entropy_with_logits(logits, targets, dim=-1, name=None)\ndef softmax_cross_entropy_with_logits(logits, targets, dim=-1, name=None): #`logits` and `labels` must have the same shape `[batch_size, num_classes]` #return loss:[batch_size], 里面保存是batch中每个样本的cross entropy  sigmoid_cross_entropy_with_logits tf.",
+    "description" : "来源：tensorflow学习笔记（三）：损失函数\nsparse_softmax_cross_entropy_with_logits tf.python.ops.nn_ops.sparse_softmax_cross_entropy_with_logits(logits, labels, name=None)\ndef sparse_softmax_cross_entropy_with_logits(logits, labels, name=None):\r#logits是最后一层的z（输入）\r#A common use case is to have logits of shape `[batch_size, num_classes]` and\r#labels of shape `[batch_size]`. But higher dimensions are supported.\r#Each entry in `labels` must be an index in `[0, num_classes)`\r#输出：loss [batch_size]\rsoftmax_cross_entropy_with_logits tf.python.ops.nn_ops.softmax_cross_entropy_with_logits(logits, targets, dim=-1, name=None)\ndef softmax_cross_entropy_with_logits(logits, targets, dim=-1, name=None):\r#`logits` and `labels` must have the same shape `[batch_size, num_classes]`\r#return loss:[batch_size], 里面保存是batch中每个样本的cross entropy\rsigmoid_cross_entropy_with_logits tf.",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -187,44 +187,27 @@ code.has-jax {
           
           
 
-          
-
-<p>来源：<a href="http://blog.csdn.net/u012436149/article/details/52874718" rel="nofollow noreferrer" target="_blank">tensorflow学习笔记（三）：损失函数</a></p>
-
-<h2 id="sparse-softmax-cross-entropy-with-logits">sparse_softmax_cross_entropy_with_logits</h2>
-
+          <p>来源：<a href="http://blog.csdn.net/u012436149/article/details/52874718">tensorflow学习笔记（三）：损失函数</a></p>
+<h2 id="sparse_softmax_cross_entropy_with_logits-">sparse_softmax_cross_entropy_with_logits</h2>
 <p>tf.python.ops.nn_ops.sparse_softmax_cross_entropy_with_logits(logits, labels, name=None)</p>
-
 <pre><code>def sparse_softmax_cross_entropy_with_logits(logits, labels, name=None):
 #logits是最后一层的z（输入）
 #A common use case is to have logits of shape `[batch_size, num_classes]` and
 #labels of shape `[batch_size]`. But higher dimensions are supported.
 #Each entry in `labels` must be an index in `[0, num_classes)`
 #输出：loss [batch_size]
-</code></pre>
-
-<h2 id="softmax-cross-entropy-with-logits">softmax_cross_entropy_with_logits</h2>
-
+</code></pre><h2 id="softmax_cross_entropy_with_logits-">softmax_cross_entropy_with_logits</h2>
 <p>tf.python.ops.nn_ops.softmax_cross_entropy_with_logits(logits, targets, dim=-1, name=None)</p>
-
 <pre><code>def softmax_cross_entropy_with_logits(logits, targets, dim=-1, name=None):
 #`logits` and `labels` must have the same shape `[batch_size, num_classes]`
 #return loss:[batch_size], 里面保存是batch中每个样本的cross entropy
-</code></pre>
-
-<h2 id="sigmoid-cross-entropy-with-logits">sigmoid_cross_entropy_with_logits</h2>
-
+</code></pre><h2 id="sigmoid_cross_entropy_with_logits-">sigmoid_cross_entropy_with_logits</h2>
 <p>tf.nn.sigmoid_cross_entropy_with_logits(logits, targets, name=None)</p>
-
 <pre><code>def sigmoid_cross_entropy_with_logits(logits, targets, name=None):
 #logits:[batch_size, num_classes],targets:[batch_size, size].logits作为用最后一层的输入就好，不需要进行sigmoid运算，函数内部进行了sigmoid操作。
 #输出loss [batch_size, num_classes]。。。说的是logits，其实内部实现是relu
-</code></pre>
-
-<h2 id="nce-loss">nce_loss</h2>
-
+</code></pre><h2 id="nce_loss-">nce_loss</h2>
 <p>tf.nn.nce_loss(nce_weights, nce_biases, embed, train_labels, num_sampled, vocabulary_size)</p>
-
 <pre><code>def nce_loss(nce_weights, nce_biases, embed, train_labels, num_sampled, vocabulary_size):
 #word2vec中用到了这个函数
 #weights: A `Tensor` of shape `[num_classes, dim]`, or a list of `Tensor`
@@ -238,12 +221,8 @@ code.has-jax {
 #num_sampled: An `int`.  The number of classes to randomly sample per batch.
 #num_classes: An `int`. The number of possible classes.
 #num_true: An `int`.  The number of target classes per training example.
-</code></pre>
-
-<h2 id="sequence-loss-by-example">sequence_loss_by_example</h2>
-
+</code></pre><h2 id="sequence_loss_by_example-">sequence_loss_by_example</h2>
 <p>tf.nn.sequence_loss_by_example(logits, targets, weights,average_across_timesteps=True,softmax_loss_function=None, name=None):</p>
-
 <pre><code>def sequence_loss_by_example(logits, targets, weights,
                              average_across_timesteps=True,
                              softmax_loss_function=None, name=None):
@@ -268,9 +247,7 @@ code.has-jax {
       total_size += 1e-12  # Just to avoid division by 0 for all-0 weights.
       log_perps /= total_size
   return log_perps
-</code></pre>
-
-<p>关于weights：形状应该是[T, batch_size] ,如果input包含填充的数据，对应的weights置0，其余置1。这样就可以保证，填充的数据不会进行梯度下降。</p>
+</code></pre><p>关于weights：形状应该是[T, batch_size] ,如果input包含填充的数据，对应的weights置0，其余置1。这样就可以保证，填充的数据不会进行梯度下降。</p>
 
     </div>
 

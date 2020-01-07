@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : "opencv视觉编程学习第五部分代码",
     "headline" : "opencv视觉编程学习第五部分代码",
-    "description" : "星期二, 10. 一月 2017 07:57下午\n 这部分主要是图像加减及各种运算\n 两图相加 主要有以下方法：\n \/\/c[i] = a[i]\x2bb[i] cv::add(imageA, imageB, resultC); \/\/c[i] = a[i]\x2bk cv::add(imageA, cv::Scalar(k), resultC); \/\/c[i] = k1*a[i]\x2bk2*b[i]\x2bk3 cv::addWeighted(imageA, k1, imageB, k2, k3, resultC); \/\/c[i] = k*a[i]\x2bb[i] cv::scaleAdd(imageA, k, imageB, resultC);  甚至于掩码：\n \/\/if (mask[i]) c[i] = a[i] \x2b b[i] cv::add(imageA, imageB, resultC, mask);  但有一点，所有这种处理必须进行cv::Saturate_cast\x26lt;\x26gt;()函数转换结果，以确保结果在0-256之间，避免溢出。\n其他运算 以下括号内省略\n###加减乘除\n cv::subtract(); cv::absdiff(); cv::multiply(); cv::divide();  位运算符  cv::bitwise_and(); cv::bitwise_or(); cv::bitwise_xor(); cv::bitwise_not();  单输入运算 cv::sqrt(); cv::pow(); cv::abs(); cv::cuberoot(); cv::exp(); cv::log();  代码演示 #include \x26lt;vector\x26gt; #include \x26lt;opencv2\/core\/core.",
+    "description" : "星期二, 10. 一月 2017 07:57下午\n 这部分主要是图像加减及各种运算\n  两图相加 主要有以下方法：\n \/\/c[i] = a[i]\x2bb[i]\rcv::add(imageA, imageB, resultC);\r\/\/c[i] = a[i]\x2bk\rcv::add(imageA, cv::Scalar(k), resultC);\r\/\/c[i] = k1*a[i]\x2bk2*b[i]\x2bk3\rcv::addWeighted(imageA, k1, imageB, k2, k3, resultC);\r\/\/c[i] = k*a[i]\x2bb[i]\rcv::scaleAdd(imageA, k, imageB, resultC);\r甚至于掩码：\n \/\/if (mask[i]) c[i] = a[i] \x2b b[i]\rcv::add(imageA, imageB, resultC, mask);\r但有一点，所有这种处理必须进行cv::Saturate_cast\x26lt;\x26gt;()函数转换结果，以确保结果在0-256之间，避免溢出。\n其他运算 以下括号内省略\n###加减乘除\n cv::subtract();\rcv::absdiff();\rcv::multiply();\rcv::divide();\r位运算符  cv::bitwise_and();\rcv::bitwise_or();\rcv::bitwise_xor();\rcv::bitwise_not();\r单输入运算 cv::sqrt();\rcv::pow();\rcv::abs();\rcv::cuberoot();\rcv::exp();\rcv::log();\r代码演示 #include \x26lt;vector\x26gt;\r#include \x26lt;opencv2\/core\/core.",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -187,22 +187,14 @@ code.has-jax {
           
           
 
-          
-
-<hr />
-
+          <hr>
 <p>星期二, 10. 一月 2017 07:57下午</p>
-
 <blockquote>
 <p>这部分主要是图像加减及各种运算</p>
 </blockquote>
-
-<hr />
-
+<hr>
 <h2 id="两图相加">两图相加</h2>
-
 <p>主要有以下方法：</p>
-
 <pre><code>  //c[i] = a[i]+b[i]
   cv::add(imageA, imageB, resultC);
   //c[i] = a[i]+k
@@ -211,48 +203,30 @@ code.has-jax {
   cv::addWeighted(imageA, k1, imageB, k2, k3, resultC);
   //c[i] = k*a[i]+b[i]
   cv::scaleAdd(imageA, k, imageB, resultC);
-</code></pre>
-
-<p>甚至于掩码：</p>
-
+</code></pre><p>甚至于掩码：</p>
 <pre><code>  //if (mask[i]) c[i] = a[i] + b[i]
   cv::add(imageA, imageB, resultC, mask);
-</code></pre>
-
-<p>但有一点，所有这种处理必须进行<code>cv::Saturate_cast&lt;&gt;()</code>函数转换结果，以确保结果在0-256之间，避免溢出。</p>
-
+</code></pre><p>但有一点，所有这种处理必须进行<code>cv::Saturate_cast&lt;&gt;()</code>函数转换结果，以确保结果在0-256之间，避免溢出。</p>
 <h2 id="其他运算">其他运算</h2>
-
 <p>以下括号内省略</p>
-
 <p>###加减乘除</p>
-
 <pre><code>  cv::subtract();
   cv::absdiff();
   cv::multiply();
   cv::divide();
-</code></pre>
-
-<h3 id="位运算符">位运算符</h3>
-
+</code></pre><h3 id="位运算符">位运算符</h3>
 <pre><code>  cv::bitwise_and();
   cv::bitwise_or();
   cv::bitwise_xor();
   cv::bitwise_not();
-</code></pre>
-
-<h3 id="单输入运算">单输入运算</h3>
-
+</code></pre><h3 id="单输入运算">单输入运算</h3>
 <pre><code>cv::sqrt();
 cv::pow();
 cv::abs();
 cv::cuberoot();
 cv::exp();
 cv::log();
-</code></pre>
-
-<h2 id="代码演示">代码演示</h2>
-
+</code></pre><h2 id="代码演示">代码演示</h2>
 <pre><code>#include &lt;vector&gt;
 #include &lt;opencv2/core/core.hpp&gt;
 #include &lt;opencv2/highgui/highgui.hpp&gt;
@@ -313,7 +287,6 @@ int main()
 	return 0;
 }
 </code></pre>
-
     </div>
 
     <div class="post-copyright">

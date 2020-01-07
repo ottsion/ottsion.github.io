@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : "opencv视觉编程学习第五部分代码",
     "headline" : "opencv视觉编程学习第五部分代码",
-    "description" : "星期二, 10. 一月 2017 07:57下午\n 这部分主要是图像加减及各种运算\n 图像波浪化 #include \x26lt;opencv2\/core\/core.hpp\x26gt; #include \x26lt;opencv2\/highgui\/highgui.hpp\x26gt; #include \x26lt;opencv2\/imgproc\/imgproc.hpp\x26gt; #include \x26lt;math.h\x26gt; \/\/ remapping an image by creating wave effects void wave(const cv::Mat \x26amp;image, cv::Mat \x26amp;result) { \/\/ the map functions cv::Mat srcX(image.rows,image.cols,CV_32F); \/\/ x-map cv::Mat srcY(image.rows,image.cols,CV_32F); \/\/ y-map \/\/ creating the mapping for (int i=0; i\x26lt;image.rows; i\x2b\x2b) { for (int j=0; j\x26lt;image.cols; j\x2b\x2b) { srcX.at\x26lt;float\x26gt;(i,j)= j; srcY.at\x26lt;float\x26gt;(i,j)= i\x2b3*sin(j\/6.0); \/\/ horizontal flipping \/\/ srcX.at\x26lt;float\x26gt;(i,j)= image.",
+    "description" : "星期二, 10. 一月 2017 07:57下午\n 这部分主要是图像加减及各种运算\n  图像波浪化 #include \x26lt;opencv2\/core\/core.hpp\x26gt;\r#include \x26lt;opencv2\/highgui\/highgui.hpp\x26gt;\r#include \x26lt;opencv2\/imgproc\/imgproc.hpp\x26gt;\r#include \x26lt;math.h\x26gt;\r\/\/ remapping an image by creating wave effects\rvoid wave(const cv::Mat \x26amp;image, cv::Mat \x26amp;result) {\r\/\/ the map functions\rcv::Mat srcX(image.rows,image.cols,CV_32F); \/\/ x-map\rcv::Mat srcY(image.rows,image.cols,CV_32F); \/\/ y-map\r\/\/ creating the mapping\rfor (int i=0; i\x26lt;image.rows; i\x2b\x2b) {\rfor (int j=0; j\x26lt;image.cols; j\x2b\x2b) {\rsrcX.at\x26lt;float\x26gt;(i,j)= j;\rsrcY.at\x26lt;float\x26gt;(i,j)= i\x2b3*sin(j\/6.0);\r\/\/ horizontal flipping\r\/\/ srcX.",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -92,7 +92,7 @@ code.has-jax {
     "datePublished": "2017-01-10 23:59:59 \x2b0000 \x2b0000",
     "dateModified" : "2017-01-10 23:59:59 \x2b0000 \x2b0000",
     "url" : "https:\/\/ottsion.github.io\/2017\/2017-01-10-opencv-cookbook-6\/",
-    "wordCount" : "129",
+    "wordCount" : "131",
     "keywords" : [ "opencv,图像处理", "静心明志"]
 }
 </script>
@@ -175,8 +175,6 @@ code.has-jax {
         
 
         
-            
-        
 
         
         
@@ -189,20 +187,13 @@ code.has-jax {
           
           
 
-          
-
-<hr />
-
+          <hr>
 <p>星期二, 10. 一月 2017 07:57下午</p>
-
 <blockquote>
 <p>这部分主要是图像加减及各种运算</p>
 </blockquote>
-
-<hr />
-
+<hr>
 <h2 id="图像波浪化">图像波浪化</h2>
-
 <pre><code>#include &lt;opencv2/core/core.hpp&gt;
 #include &lt;opencv2/highgui/highgui.hpp&gt;
 #include &lt;opencv2/imgproc/imgproc.hpp&gt;
@@ -255,9 +246,7 @@ int main()
 	cv::waitKey();
 	return 0;
 }
-</code></pre>
-
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="../../../pic/mybolg_pic/opencv/2017-01-10 20:23:54屏幕截图.png" alt="" class="lazyload"><figcaption class="image-caption"></figcaption></figure></p>
+</code></pre><p>![](../../../pic/mybolg_pic/opencv/2017-01-10 20:23:54屏幕截图.png)</p>
 
     </div>
 
@@ -346,9 +335,8 @@ int main()
 
 
     
-     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
-      
-     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
     
   
 

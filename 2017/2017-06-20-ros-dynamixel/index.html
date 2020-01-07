@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : " ROS中Dynamxel舵机控制",
     "headline" : " ROS中Dynamxel舵机控制",
-    "description" : "​\n1 拷贝程序文件  cd ~\/joey_ws\/src git clone https:\/\/github.com\/arebgun\/dynamixel_motor.git\n 2 编译文件  cd ~\/joey_ws catkin_make\n 3 设置启动驱动launch文件  vim ~\/joey_ws\/src\/dynamixel_motor\/dynamixel_tutorials\/launch\/controller_manager.launch\n  \x26lt;!-- -*- mode: XML -*- --\x26gt; \x26lt;launch\x26gt; \x26lt;node name=\x26quot;dynamixel_manager\x26quot; pkg=\x26quot;dynamixel_controllers\x26quot; type=\x26quot;controller_manager.py\x26quot; required=\x26quot;true\x26quot; output=\x26quot;screen\x26quot;\x26gt; \x26lt;rosparam\x26gt; namespace: dxl_manager serial_ports: pan_tilt_port: port_name: \x26quot;\/dev\/ttyUSB0\x26quot; baud_rate: 1000000 min_motor_id: 1 max_motor_id: 25 update_rate: 20 \x26lt;\/rosparam\x26gt; \x26lt;\/node\x26gt; \x26lt;\/launch\x26gt;  4 运行驱动检测舵机 连接USB2Dynamixel 运行Dynamixel控制器 USB2Dynamixel连接USB接口，舵机连接USB2DYnamixel接口，舵机外部供电\n roslaunch dynamixel_tutorials controller_manager.launch\n ID 搜索默认从1~25 若查找不到，可以更改controller_manager.launch将ID搜索扩大",
+    "description" : "​\n1 拷贝程序文件  cd ~\/joey_ws\/src git clone https:\/\/github.com\/arebgun\/dynamixel_motor.git\n 2 编译文件  cd ~\/joey_ws catkin_make\n 3 设置启动驱动launch文件  vim ~\/joey_ws\/src\/dynamixel_motor\/dynamixel_tutorials\/launch\/controller_manager.launch\n  \x26lt;!-- -*- mode: XML -*- --\x26gt;\r\x26lt;launch\x26gt;\r\x26lt;node name=\x26quot;dynamixel_manager\x26quot; pkg=\x26quot;dynamixel_controllers\x26quot; type=\x26quot;controller_manager.py\x26quot; required=\x26quot;true\x26quot; output=\x26quot;screen\x26quot;\x26gt;\r\x26lt;rosparam\x26gt;\rnamespace: dxl_manager\rserial_ports:\rpan_tilt_port:\rport_name: \x26quot;\/dev\/ttyUSB0\x26quot;\rbaud_rate: 1000000\rmin_motor_id: 1\rmax_motor_id: 25\rupdate_rate: 20\r\x26lt;\/rosparam\x26gt;\r\x26lt;\/node\x26gt;\r\x26lt;\/launch\x26gt;\r4 运行驱动检测舵机 连接USB2Dynamixel 运行Dynamixel控制器 USB2Dynamixel连接USB接口，舵机连接USB2DYnamixel接口，舵机外部供电\n roslaunch dynamixel_tutorials controller_manager.launch\n ID 搜索默认从1~25 若查找不到，可以更改controller_manager.launch将ID搜索扩大\n rostopic list",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -187,30 +187,21 @@ code.has-jax {
           
           
 
-          
-
-<p>​</p>
-
+          <p>​</p>
 <h1 id="1-拷贝程序文件">1 拷贝程序文件</h1>
-
 <blockquote>
 <p>cd ~/joey_ws/src
-git clone <a href="https://github.com/arebgun/dynamixel_motor.git" rel="nofollow noreferrer" target="_blank">https://github.com/arebgun/dynamixel_motor.git</a></p>
+git clone <a href="https://github.com/arebgun/dynamixel_motor.git">https://github.com/arebgun/dynamixel_motor.git</a></p>
 </blockquote>
-
 <h1 id="2-编译文件">2 编译文件</h1>
-
 <blockquote>
 <p>cd ~/joey_ws
 catkin_make</p>
 </blockquote>
-
 <h1 id="3-设置启动驱动launch文件">3 设置启动驱动launch文件</h1>
-
 <blockquote>
 <p>vim ~/joey_ws/src/dynamixel_motor/dynamixel_tutorials/launch/controller_manager.launch</p>
 </blockquote>
-
 <pre><code>    &lt;!-- -*- mode: XML -*- --&gt;
     &lt;launch&gt;
         &lt;node name=&quot;dynamixel_manager&quot; pkg=&quot;dynamixel_controllers&quot; type=&quot;controller_manager.py&quot; required=&quot;true&quot; output=&quot;screen&quot;&gt;
@@ -226,31 +217,21 @@ catkin_make</p>
             &lt;/rosparam&gt;
         &lt;/node&gt;
     &lt;/launch&gt;
-</code></pre>
-
-<h1 id="4-运行驱动检测舵机">4 运行驱动检测舵机</h1>
-
+</code></pre><h1 id="4-运行驱动检测舵机">4 运行驱动检测舵机</h1>
 <p>连接USB2Dynamixel 运行Dynamixel控制器
 USB2Dynamixel连接USB接口，舵机连接USB2DYnamixel接口，舵机外部供电</p>
-
 <blockquote>
 <p>roslaunch dynamixel_tutorials controller_manager.launch</p>
 </blockquote>
-
 <p>ID 搜索默认从1~25 若查找不到，可以更改controller_manager.launch将ID搜索扩大</p>
-
 <blockquote>
 <p>rostopic list</p>
 </blockquote>
-
-<p>出现--&gt; /motor_states/pan_tilt_port 则连接成功</p>
-
+<p>出现&ndash;&gt; /motor_states/pan_tilt_port 则连接成功</p>
 <h1 id="5-设置舵机驱动文件">5 设置舵机驱动文件</h1>
-
 <blockquote>
 <p>vim ~/joey_ws/src/dynamixel_motor/dynamixel_tutorials/config/dynamixel_joint_controllers.yaml</p>
 </blockquote>
-
 <pre><code>    pan_controller:
         controller:
             package: dynamixel_controllers
@@ -276,12 +257,9 @@ USB2Dynamixel连接USB接口，舵机连接USB2DYnamixel接口，舵机外部供
             init: 512
             min: 0
             max: 1023
-</code></pre>
-
-<blockquote>
+</code></pre><blockquote>
 <p>vim ~/joey_ws/src/dynamixel_motor/dynamixel_tutorials/launch//controller_spawner.launch</p>
 </blockquote>
-
 <pre><code>    &lt;!-- -*- mode: XML -*- --&gt;
     &lt;launch&gt;
         &lt;!-- Load controller configuration to parameter server --&gt;
@@ -296,22 +274,16 @@ USB2Dynamixel连接USB接口，舵机连接USB2DYnamixel接口，舵机外部供
                     tilt_controller&quot;
               output=&quot;screen&quot;/&gt;
     &lt;/launch&gt;
-</code></pre>
-
-<h1 id="6-运行舵机驱动话题">6 运行舵机驱动话题</h1>
-
+</code></pre><h1 id="6-运行舵机驱动话题">6 运行舵机驱动话题</h1>
 <blockquote>
 <p>roslaunch dynamixel_tutorials controller_spawner.launch
 rostopic list</p>
 </blockquote>
-
 <p>出现：/tilt_controller/command /pan_controller/command 则运行成功</p>
-
 <h1 id="7-控制舵机">7 控制舵机</h1>
-
 <blockquote>
-<p>rostopic pub /pan_controller/command std_msgs/Float64 -- 1.5
-rostopic pub /tilt_controller/command std_msgs/Float64 -- 1.5</p>
+<p>rostopic pub /pan_controller/command std_msgs/Float64 &ndash; 1.5
+rostopic pub /tilt_controller/command std_msgs/Float64 &ndash; 1.5</p>
 </blockquote>
 
     </div>
