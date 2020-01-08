@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ROS on 静心明志</title>
+    <title>Ros on 静心明志</title>
     <link>https://ottsion.github.io/categories/ros/</link>
-    <description>Recent content in ROS on 静心明志</description>
+    <description>Recent content in Ros on 静心明志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Jun 2017 23:59:59 +0000</lastBuildDate>
