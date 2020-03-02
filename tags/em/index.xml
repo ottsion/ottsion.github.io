@@ -40,17 +40,16 @@ $\frac{dl(\theta)}{d(\theta)}=0$ ==&amp;gt; $\frac{dlnl(\theta)}{d\theta}=0$ 通
 $l(\theta)=\prod_{i=1}^n{p(x_i|\theta,z)}=\prod_{i=1}^{n}\sum_{Z}p_{\theta}(z)p(x_i|z)$
 两边取对数：
 $lnl(\theta)=\sum_{i=1}^{n}ln\sum_{Z}p_{\theta}(z)p(x_i|z)$
-我们的目标是使得$lnl(\theta)$极大似然估计值最大，这样才越能表达出当前已知序列的概率，而当我们预先设定一个$\theta=\theta_{n-1}$ 的时候（此处$\theta_{n-1}为一个假定的确定值，只是为了说明\theta更新是由第n-1个到第n个$），$lnl(\theta)$其实是一个只包含了$z$变量的函数，我们要做的是找出在该情况下使得$lnl(\theta)$最大的$z$，这时候这个$z$是基于$\theta_{n-1}$下最优的$z$，下一步就是利用这个局部最优的$z$反求在这个$z$下更优的$\theta_n$，这里要使得这个$\theta_n$ 比$\theta_{n-1}$更好，那就说明在$\theta_n$下$lnl(\theta_n)$ 比$lnl(\theta_{n-1})$更大，也就是：
-$lnl(\theta_n)-lnl(\theta_{n-1})&amp;gt;0$
+我们的目标是使得$lnl(\theta)$极大似然估计值最大，这样才越能表达出当前已知序列的概率，而当我们预先设定一个$\theta=\theta_{n-1}$ 的时候（此处$\theta_{n-1}为一个假定的确定值，只是为了说明\theta更新是由第n-1个到第n个$），$lnl(\theta)$其实是一个只包含了$z$变量的函数
+ 我们要做的是找出在该情况下使得$lnl(\theta)$最大的$z$，这时候这个$z$是基于$\theta_{n-1}$下最优的$z$，下一步就是利用这个局部最优的$z$反求在这个$z$下更优的$\theta_n$，这里要使得这个$\theta_n$ 比$\theta_{n-1}$更好，那就说明在$\theta_n$下$lnl(\theta_n)$ 比$lnl(\theta_{n-1})$更大，也就是：
+ $lnl(\theta_n)-lnl(\theta_{n-1})&amp;gt;0$
 $lnl(\theta_n)-lnl(\theta_{n-1})=\sum_{i=1}^{n}ln\sum_{Z}p_{\theta_n}(z)p(x_i|z)-\sum_{i=1}^{n}ln\sum_{Z}p_{\theta_{n-1}}(z)p(x_i|z)$
 其中由于$\theta_{n-1}$由于是常数项，可以直接将$z$省略：
 $=\sum_{i=1}^{n}[ln\sum_{Z}p_{\theta_n}(z)p(x_i|z)-lnp_{\theta_{n-1}}(x_i)]$
 其中可以拆解一下：
 $Q1=ln\sum_{Z}p_{\theta_n}(z)p(x_i|z)=ln\sum_{z}p_{\theta_{n-1}}(z|x_i)\frac{p(x_i|z)p_{\theta_n}(z)}{p_{\theta_{n-1}}(z|x_i)}$
 这里把$p_{\theta_n}(x_i)$当作x，则$\sum_{z}p_{\theta_{n-1}}(z|x_i)\frac{p(x_i|z)p_{\theta_n}(z)}{p_{\theta_{n-1}}(z|x_i)}$就是$E[x]$ ，根据jensen不等式：
-$Q1=ln\sum_{z}p_{\theta_{n-1}}(z|x_i)\frac{p(x_i|z)p_{\theta_n}(z)}{p_{\theta_{n-1}}(z|x_i)}\geq \sum_{z}p_{\theta_{n-1}}(z|x_i)ln\frac{p(x_i|z)p_{\theta_n}(z)}{p(z|x_i)}$
-$Q2=lnp_{\theta_{n-1}}(x_i)=lnp_{\theta_{n-1}}(x_i)\times\sum_{Z}p_{\theta_{n-1}}(z|x_i)$ 此项后部分其实和为1，它与前项无关
-$Q2=\sum_{z}p_{\theta_{n-1}}(z|x_i)lnp_{\theta_{n-1}}(x_i)$</description>
+$Q1=ln\sum_{z}p_{\theta_{n-1}}(z|x_i)\frac{p(x_i|z)p_{\theta_n}(z)}{p_{\theta_{n-1}}(z|x_i)}\geq \sum_{z}p_{\theta_{n-1}}(z|x_i)ln\frac{p(x_i|z)p_{\theta_n}(z)}{p(z|x_i)}$</description>
     </item>
     
   </channel>
