@@ -92,7 +92,7 @@ code.has-jax {
     "datePublished": "2020-02-24 15:57:32 \x2b0800 CST",
     "dateModified" : "2020-02-24 15:57:32 \x2b0800 CST",
     "url" : "https:\/\/ottsion.github.io\/2020\/lda\/",
-    "wordCount" : "257",
+    "wordCount" : "258",
     "keywords" : [ "ml","LDA","pLSA","beta分布","Gamma分布","Dirichlet分布","Gibbs采样", "静心明志"]
 }
 </script>
@@ -299,7 +299,7 @@ code.has-jax {
 <p><img src="../../sources/lda1.jpg" alt=""></p>
 <p>LDA概率图模型主要包括：</p>
 <ul>
-<li>$\vec\alpha -&gt; \vec{\theta_m}-&gt;z_{m,n}$ 过程：随机从无穷多个Doc-Topic骰子中抽取一个骰子 <img src="https://www.zhihu.com/equation?tex=%5Cvec%7B%5Ctheta%7D_m" alt="[公式]"> ，然后掷骰子<img src="https://www.zhihu.com/equation?tex=%5Cvec%7B%5Ctheta%7D_m" alt="[公式]"> 得到一个Topic编号 <img src="https://www.zhihu.com/equation?tex=z_%7Bm%2Cn%7D" alt="[公式]"> ；</li>
+<li>$\vec\alpha -&gt; \vec{\theta_m}-&gt;z_{m,n}$ 过程：随机从无穷多个Doc-Topic骰子中抽取一个骰子 $\vec{\theta_m}$，然后掷骰子$\vec{\theta_m}$ 得到一个Topic编号 $z_{m,n}$；</li>
 <li>$\vec\beta-&gt; \vec{\phi_m}-&gt;w_{m,n}$   过程：随机从无穷多个Topic-Word骰子中独立抽取 k个骰子，并选择编号为$z_{m,n}$ 的骰子$\vec \phi_k$  ，然后掷骰子$\vec \phi_k$  得到单词$w_{m,n}$。</li>
 </ul>
 <p>注意：训练的目的就是上述Doc-topic和topic-word矩阵，其中第一个是可变的，我们在预测新的一篇文章时利用训练好的topic-word矩阵进行迭代采样，直至收敛，会获得$nd[k]$的序列，进而得到对应的$theta[k]$ 表示各个topic的分布。</p>
