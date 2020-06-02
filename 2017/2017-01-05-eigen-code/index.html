@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : "Eigen矩阵库——代码演示",
     "headline" : "Eigen矩阵库——代码演示",
-    "description" : "星期四, 05. 一月 2017 02:13下午\n  有关eigen库的一些基本使用方法\n  矩阵、向量初始化 #include \x26lt;iostream\x26gt;\r#include \x26quot;Eigen\/Dense\x26quot;\rusing namespace Eigen;\rint main()\r{\rMatrixXf m1(3,4); \/\/动态矩阵，建立3行4列。\rMatrixXf m2(4,3); \/\/4行3列，依此类推。\rMatrixXf m3(3,3);\rVector3f v1; \/\/若是静态数组，则不用指定行或者列\r\/* 初始化 *\/\rMatrix3d m = Matrix3d::Random();\rm1 = MatrixXf::Zero(3,4); \/\/用0矩阵初始化,要指定行列数\rm2 = MatrixXf::Zero(4,3);\rm3 = MatrixXf::Identity(3,3); \/\/用单位矩阵初始化\rv1 = Vector3f::Zero(); \/\/同理，若是静态的，不用指定行列数\rm1 \x26lt;\x26lt; 1,0,0,1, \/\/也可以以这种方式初始化\r1,5,0,1,\r0,0,9,1;\rm2 \x26lt;\x26lt; 1,0,0,\r0,4,0,\r0,0,7,\r1,1,1;\r\/\/向量初始化，与矩阵类似\rVector3d v3(1,2,3);\rVectorXf vx(30);\r}\rC\x2b\x2b数组和矩阵转换 使用Map函数，可以实现Eigen的矩阵和c\x2b\x2b中的数组直接转换,语法如下：",
+    "description" : "星期四, 05. 一月 2017 02:13下午\n  有关eigen库的一些基本使用方法\n  矩阵、向量初始化 #include \u0026lt;iostream\u0026gt; #include \u0026quot;Eigen\/Dense\u0026quot; using namespace Eigen; int main() { MatrixXf m1(3,4); \/\/动态矩阵，建立3行4列。 MatrixXf m2(4,3); \/\/4行3列，依此类推。 MatrixXf m3(3,3); Vector3f v1; \/\/若是静态数组，则不用指定行或者列 \/* 初始化 *\/ Matrix3d m = Matrix3d::Random(); m1 = MatrixXf::Zero(3,4); \/\/用0矩阵初始化,要指定行列数 m2 = MatrixXf::Zero(4,3); m3 = MatrixXf::Identity(3,3); \/\/用单位矩阵初始化 v1 = Vector3f::Zero(); \/\/同理，若是静态的，不用指定行列数 m1 \u0026lt;\u0026lt; 1,0,0,1, \/\/也可以以这种方式初始化 1,5,0,1, 0,0,9,1; m2 \u0026lt;\u0026lt; 1,0,0, 0,4,0, 0,0,7, 1,1,1; \/\/向量初始化，与矩阵类似 Vector3d v3(1,2,3); VectorXf vx(30); } C\u002b\u002b数组和矩阵转换 使用Map函数，可以实现Eigen的矩阵和c\u002b\u002b中的数组直接转换,语法如下：",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -89,8 +89,8 @@ code.has-jax {
     "accountablePerson" : "caicai",
     "copyrightHolder" : "caicai",
     "copyrightYear" : "2017",
-    "datePublished": "2017-01-05 23:59:59 \x2b0000 \x2b0000",
-    "dateModified" : "2017-01-05 23:59:59 \x2b0000 \x2b0000",
+    "datePublished": "2017-01-05 23:59:59 \u002b0000 UTC",
+    "dateModified" : "2017-01-05 23:59:59 \u002b0000 UTC",
     "url" : "https:\/\/ottsion.github.io\/2017\/2017-01-05-eigen-code\/",
     "wordCount" : "592",
     "keywords" : [ "eigen", "静心明志"]
@@ -426,7 +426,7 @@ mat.makeCompressed(); // optional
 <pre><code>sm1.real() sm1.imag() -sm1 0.5*sm1 
 sm1+sm2 sm1-sm2 sm1.cwiseProduct(sm2) 
 </code></pre><p>二元运算中，稀疏矩阵和普通矩阵可以混合使用</p>
-<p>//dm表示普通矩阵 
+<p>//dm表示普通矩阵
 <code>dm2 = sm1 + dm1; </code>
 也支持计算转置矩阵和伴随矩阵</p>
 

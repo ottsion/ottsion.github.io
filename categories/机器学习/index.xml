@@ -34,11 +34,11 @@ AdaBoost的例子 例 1 给定如表 1所示训练数据。假设弱分类器由
       <guid>https://ottsion.github.io/2017/2017-05-11-boosting/</guid>
       <description>链接: 1. 线性回归总结 2. 正则化 3. 逻辑回归 4. Boosting 5. Adaboost算法
  模型来源 提升算法是常用的有效的统计学习算法，属于迭代算法，它通过不断地使用一个弱学习器弥补前一个弱学习器的“不足”的过程，来串行地构造一个较强的学习器，这个强学习器能够使目标函数值足够小。从优化的角度分析，与一般的在参数空间搜索最优解的学习算法（如神经网络）类似，Boosting也是一个迭代搜索，且最优的算法，不同的是，它的搜索空间是学习器空间，或说函数空间（Function space），它的搜索方向是构造不断完善的强学习器，以达到目标函数（或说误差函数）足够小的目的。 Bagging也是一种常用的统计学习方法，两者经常放在一起对比，它们不同的是，Bagging将在Bootstrap采样得到的不同训练子集上的弱学习器的结果综合考虑，各个弱学习器的构建过程是并行的。而Boosting是通过串行地不断迭加弱学习器形成一个强学习器，是学习模型的提升过程。此外，Boosting迭代在降低训练误差的同时，使模型预测的确信度（margin）不断提高，是它获得较好泛化能力的主要原因，而Bagging主要是通过平均来降低模型的方差(variation).
-example 为说明Boosting的主要过程，下面举一个简化的例子。 假设训练数据集为(x1,y1),(x2,y2),&amp;hellip;,(xn,yn)我们的任务是寻找使这个回归问题的均方误差最小的模型F(x). 如果已经有一个初始的模型f,且f(x1)=0.8,但y1=0.9 ,f(x2)=1.4,但y2=1.3 …显然f是不完美的，我们可以采用不断完善f的方式,如不断在f的基础上增加模型（如决策树）h,即：f(x)←f(x)+h(x),使f 趋于F. 我们希望： f(x1)+h(x1)=y1 ====&amp;gt; h(x1)=y1−f(x1)f(x2)+h(x2)=y2 ====&amp;gt; h(x2)=y2−f(x2)... ====&amp;gt; ...f(xn)+h(xn)=yn ====&amp;gt; h(xn)=yn−f(xn)然而恰好满足上式的h可能不存在，但我们总可以找到使残差yi−f(xi)变小的h. 上述过程等价于拟合如下数据集：
-(x1,y1−f(x1))(x2,y2−f(x2))...(xn,yn−f(xn))上述一次叠加h的过程就是Boosting的一次迭代。要使f足够接近F一般需要多次迭代。
+example 为说明Boosting的主要过程，下面举一个简化的例子。 假设训练数据集为(x1,y1),(x2,y2),&amp;hellip;,(xn,yn)我们的任务是寻找使这个回归问题的均方误差最小的模型F(x). 如果已经有一个初始的模型f,且f(x1)=0.8,但y1=0.9 ,f(x2)=1.4,但y2=1.3 …显然f是不完美的，我们可以采用不断完善f的方式,如不断在f的基础上增加模型（如决策树）h,即：f(x)←f(x)+h(x),使f 趋于F. 我们希望： f(x1)+h(x1)=y1 ====&amp;gt; h(x1)=y1−f(x1) f(x2)+h(x2)=y2 ====&amp;gt; h(x2)=y2−f(x2) ... ====&amp;gt; ... f(xn)+h(xn)=yn ====&amp;gt; h(xn)=yn−f(xn) 然而恰好满足上式的h可能不存在，但我们总可以找到使残差yi−f(xi)变小的h. 上述过程等价于拟合如下数据集：
+(x1,y1−f(x1)) (x2,y2−f(x2)) ... (xn,yn−f(xn)) 上述一次叠加h的过程就是Boosting的一次迭代。要使f足够接近F一般需要多次迭代。
 依据损失函数的不同具体分类有：
 链接:关于AdaBoost的算法推导
-Gradient Boosting 和Adaboost不同，Gradient Boosting 在迭代的时候选择梯度下降的方向来保证最后的结果最好。 损失函数用来描述模型的“靠谱”程度，假设模型没有过拟合，损失函数越大，模型的错误率越高 如果我们的模型能够让损失函数持续的下降，则说明我们的模型在不停的改进，而最好的方式就是让损失函数在其梯度方向上下降。 import numpy as npimport matplotlib.pyplot as pltfrom sklearn import ensemblefrom sklearn import datasetsfrom sklearn.utils import shufflefrom sklearn.</description>
+Gradient Boosting 和Adaboost不同，Gradient Boosting 在迭代的时候选择梯度下降的方向来保证最后的结果最好。 损失函数用来描述模型的“靠谱”程度，假设模型没有过拟合，损失函数越大，模型的错误率越高 如果我们的模型能够让损失函数持续的下降，则说明我们的模型在不停的改进，而最好的方式就是让损失函数在其梯度方向上下降。 import numpy as np import matplotlib.pyplot as plt from sklearn import ensemble from sklearn import datasets from sklearn.utils import shuffle from sklearn.</description>
     </item>
     
     <item>
@@ -106,7 +106,7 @@ Gradient Boosting 和Adaboost不同，Gradient Boosting 在迭代的时候选择
  人工选择减少特征数目 通过机器学习算法之类的算法去选取主要特征，放弃次要特征 正则化：不去减少特征，而是通过优化配置参数θ去实现消除过拟合  正则化 正则化中我们将保留所有的特征变量，但是会减小特征变量的数量级（参数数值的大小θ(j)）。这个方法非常有效，当我们有很多特征变量时，其中每一个变量都能对预测产生一点影响比如我们有很多特征变量，其中每一个变量都是有用的，因此我们不希望把它们删掉，这就导致了正则化概念的发生。 在论文中常见的都聚集在：零范数、一范数、二范数、迹范数、Frobenius范数和核范数等等
 L0范数与L1范数 L0范数是指向量中非0的元素的个数。如果我们用L0范数来规则化一个参数矩阵W的话，就是希望W的大部分元素都是0 L1范数是指向量中各个元素绝对值之和，也有个美称叫“稀疏规则算子”（Lasso regularization）。为什么L1范数会使权值稀疏？有人可能会这样给你回答“它是L0范数的最优凸近似”。实际上，还存在一个更美的回答：任何的规则化算子，如果他在Wi=0的地方不可微，并且可以分解为一个“求和”的形式，那么这个规则化算子就可以实现稀疏。这说是这么说，W的L1范数是绝对值，|w|在w=0处是不可微，但这还是不够直观。这里因为我们需要和L2范数进行对比分析。 既然L0可以实现稀疏，为什么不用L0，而要用L1呢？因为L0范数很难优化求解（NP难问题），二是L1范数是L0范数的最优凸近似，而且它比L0范数要容易优化求解。所以大家才把目光和万千宠爱转于L1范数。 OK，来个一句话总结：L1范数和L0范数可以实现稀疏，L1因具有比L0更好的优化求解特性而被广泛应用。它能实现特征的自动选择和有很好的可解释性。
 L2范数 L2范数是指向量各元素的平方和然后求平方根。我们让L2范数的规则项||W||2最小，可以使得W的每个元素都很小，都接近于0，但与L1范数不同，它不会让它等于0，而是接近于0，这里是有很大的区别的哦。而越小的参数说明模型越简单，越简单的模型则越不容易产生过拟合现象。为什么越小的参数说明模型越简单？我也不懂，我的理解是：限制了参数很小，实际上就限制了多项式某些分量的影响很小（看上面线性回归的模型的那个拟合的图），这样就相当于减少参数个数。其实我也不太懂，希望大家可以指点下。
-这里也一句话总结下：通过L2范数，我们可以实现了对模型空间的限制，从而在一定程度上避免了过拟合。 当然，采用正则化以后之前的矩阵求系数W就可以解决： lasso回归效果（一范数）： ![lasso回归] ](http://upload-images.jianshu.io/upload_images/1070582-fc992c96c6abb03a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) Ridge回归效果（二范数）： # -*- coding: utf-8 -*-&amp;quot;&amp;quot;&amp;quot;Created on Thu May 04 20:08:49 2017@author: SUNFC&amp;quot;&amp;quot;&amp;quot;import numpy as npimport matplotlib.</description>
+这里也一句话总结下：通过L2范数，我们可以实现了对模型空间的限制，从而在一定程度上避免了过拟合。 当然，采用正则化以后之前的矩阵求系数W就可以解决： lasso回归效果（一范数）： ![lasso回归] ](http://upload-images.jianshu.io/upload_images/1070582-fc992c96c6abb03a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) Ridge回归效果（二范数）： # -*- coding: utf-8 -*- &amp;quot;&amp;quot;&amp;quot; Created on Thu May 04 20:08:49 2017 @author: SUNFC &amp;quot;&amp;quot;&amp;quot; import numpy as np import matplotlib.</description>
     </item>
     
     <item>
@@ -155,7 +155,7 @@ L2范数 L2范数是指向量各元素的平方和然后求平方根。我们让
       <guid>https://ottsion.github.io/2017/2017-05-11-linear-regression/</guid>
       <description>链接: 1. 线性回归总结 2. 正则化 3. 逻辑回归 4. Boosting 5. Adaboost算法
  一. 模型介绍 线性回归简而言之就是在平面中用一条直线去拟合一些点数据,在三维空间中就是用一个平面去拟合三维中的数据,而我们要做的就是寻找出一条最佳的线段或者平面去拟合数据,当然高维情况类似去寻找超平面。 初中的时候我们就学习过一元一次方程,那就是一个简单的拟合过程,只不过那个是完全可以拟合在一条线上,现在要做的是在有误差或者数据非线性排列的情况下,我们只能去尽力找出一条最佳的拟合线路:
-import numpy as npimport matplotlib.pyplot as pltx = np.arange(1,10,2).reshape(-1,1)y = a*2 plt.plot(x,y,&#39;r-&#39;,linewidth=2, label=u&amp;quot;线性拟合&amp;quot;)plt.plot(x,y, &#39;bo&#39;)plt.show()import numpy as npimport matplotlib.pyplot as pltfrom sklearn.linear_model import LinearRegressionx = np.arange(1,10,2).reshape(-1,1)y = a*2 + np.random.randn(5)linear_model = LinearRegression()linear_model.fit(x.reshape(-1, 1),y)y_pre = linear_model.predict(x)plt.plot(x,y_pre,&#39;r-&#39;,linewidth=2, label=u&amp;quot;线性拟合&amp;quot;)plt.plot(x,y, &#39;bo&#39;)plt.show()定义一下一些符号表达，我们通常习惯用X=(x1,x2,&amp;hellip;,xn)T∈ℝn×p表示数据矩阵，其中xi∈ℝp表示一个p维度长的数据样本；y=(y1,y2,&amp;hellip;,yn)T∈ℝn表示数据的label，这里只考虑每个样本一类的情况。
+import numpy as np import matplotlib.pyplot as plt x = np.arange(1,10,2).reshape(-1,1) y = a*2 plt.plot(x,y,&#39;r-&#39;,linewidth=2, label=u&amp;quot;线性拟合&amp;quot;) plt.plot(x,y, &#39;bo&#39;) plt.show() import numpy as np import matplotlib.pyplot as plt from sklearn.linear_model import LinearRegression x = np.arange(1,10,2).reshape(-1,1) y = a*2 + np.random.randn(5) linear_model = LinearRegression() linear_model.fit(x.reshape(-1, 1),y) y_pre = linear_model.predict(x) plt.plot(x,y_pre,&#39;r-&#39;,linewidth=2, label=u&amp;quot;线性拟合&amp;quot;) plt.plot(x,y, &#39;bo&#39;) plt.show() 定义一下一些符号表达，我们通常习惯用X=(x1,x2,&amp;hellip;,xn)T∈ℝn×p表示数据矩阵，其中xi∈ℝp表示一个p维度长的数据样本；y=(y1,y2,&amp;hellip;,yn)T∈ℝn表示数据的label，这里只考虑每个样本一类的情况。
 线性回归的模型是这样的，对于一个样本xi，它的输出值是其特征的线性组合：</description>
     </item>
     

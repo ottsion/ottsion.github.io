@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : "js的ajax方式",
     "headline" : "js的ajax方式",
-    "description" : "JS通过ajax调用接口实现数据传送，第一种方式为设置button的点击onclick方法，第二种通过绑定bind点击事件获得访问\n用onclick方式：\n\x26lt;!DOCTYPE html\x26gt;\r\x26lt;html\x26gt;\r\x26lt;head\x26gt;\r\x26lt;meta http-equiv=\x26#34;content-type\x26#34; content=\x26#34;text\/html; charset=UTF-8\x26#34;\x26gt;\r\x26lt;meta name=\x26#34;viewport\x26#34; content=\x26#34;width=device-width, initial-scale=1\x26#34;\x26gt;\r\x26lt;!--src值为文件位置路径 --\x26gt;\r\x26lt;script type=\x26#34;text\/javascript\x26#34; charset=\x26#34;UTF-8\x26#34; src=\x26#34;javascript\/jquery-1.12.1.js\x26#34;\x26gt;\x26lt;\/script\x26gt;\r\x26lt;title\x26gt;测试案例\x26lt;\/title\x26gt;\r\x26lt;!--语法：jQuery.getJSON(url,data,success(data,status,xhr)) --\x26gt;\r\x26lt;script type=\x26#34;text\/javascript\x26#34; charset=\x26#34;UTF-8\x26#34;\x26gt;\rfunction getToken(){\r$.getJSON(\x26#34;http:\/\/localhost\/kdapi\/api\/access_token\x26#34;, {\x26#34;id\x26#34;:111,\x26#34;secret\x26#34;:2352532}, function(result){\ralert(result.access_token);\r});\r}\r\x26lt;\/script\x26gt;\r\x26lt;\/head\x26gt;\r\x26lt;body\x26gt;\r\x26lt;button onclick=\x26#34;getToken()\x26#34; style=\x26#34;width: 120px; height: 60px;\x26#34;\x26gt;获取Token\x26lt;\/button\x26gt;\r\x26lt;\/body\x26gt;\r\x26lt;\/html\x26gt;\r",
+    "description" : "JS通过ajax调用接口实现数据传送，第一种方式为设置button的点击onclick方法，第二种通过绑定bind点击事件获得访问\n用onclick方式：\n\u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html\u0026gt; \u0026lt;head\u0026gt; \u0026lt;meta http-equiv=\u0026#34;content-type\u0026#34; content=\u0026#34;text\/html; charset=UTF-8\u0026#34;\u0026gt; \u0026lt;meta name=\u0026#34;viewport\u0026#34; content=\u0026#34;width=device-width, initial-scale=1\u0026#34;\u0026gt; \u0026lt;!-- src值为文件位置路径 --\u0026gt; \u0026lt;script type=\u0026#34;text\/javascript\u0026#34; charset=\u0026#34;UTF-8\u0026#34; src=\u0026#34;javascript\/jquery-1.12.1.js\u0026#34;\u0026gt;\u0026lt;\/script\u0026gt; \u0026lt;title\u0026gt;测试案例\u0026lt;\/title\u0026gt; \u0026lt;!-- 语法：jQuery.getJSON(url,data,success(data,status,xhr)) --\u0026gt; \u0026lt;script type=\u0026#34;text\/javascript\u0026#34; charset=\u0026#34;UTF-8\u0026#34;\u0026gt; function getToken(){ $.getJSON(\u0026#34;http:\/\/localhost\/kdapi\/api\/access_token\u0026#34;, {\u0026#34;id\u0026#34;:111,\u0026#34;secret\u0026#34;:2352532}, function(result){ alert(result.access_token); }); } \u0026lt;\/script\u0026gt; \u0026lt;\/head\u0026gt; \u0026lt;body\u0026gt; \u0026lt;button onclick=\u0026#34;getToken()\u0026#34; style=\u0026#34;width: 120px; height: 60px;\u0026#34;\u0026gt;获取Token\u0026lt;\/button\u0026gt; \u0026lt;\/body\u0026gt; \u0026lt;\/html\u0026gt; ",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -89,10 +89,10 @@ code.has-jax {
     "accountablePerson" : "caicai",
     "copyrightHolder" : "caicai",
     "copyrightYear" : "2019",
-    "datePublished": "2019-05-08 14:01:43 \x2b0800 CST",
-    "dateModified" : "2019-05-08 14:01:43 \x2b0800 CST",
+    "datePublished": "2019-05-08 14:01:43 \u002b0800 \u002b0800",
+    "dateModified" : "2019-05-08 14:01:43 \u002b0800 \u002b0800",
     "url" : "https:\/\/ottsion.github.io\/2019\/js%E7%9A%84ajax%E6%96%B9%E5%BC%8F\/",
-    "wordCount" : "45",
+    "wordCount" : "47",
     "keywords" : [ "html","web","ajax", "静心明志"]
 }
 </script>
@@ -194,10 +194,10 @@ code.has-jax {
 &lt;<span style="color:#f92672">head</span>&gt;
     &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;content-type&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/html; charset=UTF-8&#34;</span>&gt;
     &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
-    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> src值为文件位置路径 </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#75715e">&lt;!-- src值为文件位置路径 --&gt;</span>
     &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;javascript/jquery-1.12.1.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
     &lt;<span style="color:#f92672">title</span>&gt;测试案例&lt;/<span style="color:#f92672">title</span>&gt;
-    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 语法：jQuery.getJSON(url,data,success(data,status,xhr)) </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#75715e">&lt;!-- 语法：jQuery.getJSON(url,data,success(data,status,xhr)) --&gt;</span>
     &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
         <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getToken</span>(){
             <span style="color:#a6e22e">$</span>.<span style="color:#a6e22e">getJSON</span>(<span style="color:#e6db74">&#34;http://localhost/kdapi/api/access_token&#34;</span>, {<span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span><span style="color:#ae81ff">111</span>,<span style="color:#e6db74">&#34;secret&#34;</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2352532</span>}, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">result</span>){

@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : "Eigen矩阵库——初步用法（一）",
     "headline" : "Eigen矩阵库——初步用法（一）",
-    "description" : "星期三, 04. 一月 2017 09:05下午\n  这部分估计会是三篇，摘取自别人的博客，最后附有链接，简单解释了Eigen矩阵库的使用方法。\n  矩阵的定义 Eigen中关于矩阵类的模板函数中，共有6个模板参数，但是目前常用的只有前三个，如下所示：\n template\x26lt;typename _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols\x26gt; struct traits\x26lt;Matrix\x26lt;_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols\x26gt; \x26gt; ....... 其前三个参数分别表示矩阵元素的类型（_Scalar），行数（_Rows）和列数（ _Cols）。 矩阵定义时可以使用Dynamic来表示矩阵的行列数为未知，例如：\ntypedef Matrix\x26lt;double,Dynamic, Dynamic\x26gt; MatrixXd;\r在Eigen中也提供了很多常见的简化定义形式，例如：\ntypedef Matrix\x26lt; double , 3 , 1\x26gt; Vector3d\r注意：\n  Eigen中无论是矩阵还是数组、向量，无论是静态矩阵还是动态矩阵都提供默认构造函数，也就是你定义这些数据结构时都可以不用提供任何参数，其大小均由运行时来确定。\n  矩阵的构造函数中只提供行列数、元素类型的构造参数，而不提供元素值的构造，对于比较小的、固定长度的向量提供初始化元素的定义，例如：\n  Vector2d a(5.0, 6.0); Vector3d b(5.0, 6.0, 7.0); Vector4d c(5.0, 6.0, 7.0, 8.",
+    "description" : "星期三, 04. 一月 2017 09:05下午\n  这部分估计会是三篇，摘取自别人的博客，最后附有链接，简单解释了Eigen矩阵库的使用方法。\n  矩阵的定义 Eigen中关于矩阵类的模板函数中，共有6个模板参数，但是目前常用的只有前三个，如下所示：\n template\u0026lt;typename _Scalar, int _Rows, int _Cols, int _Options, int _MaxRows, int _MaxCols\u0026gt; struct traits\u0026lt;Matrix\u0026lt;_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols\u0026gt; \u0026gt; ....... 其前三个参数分别表示矩阵元素的类型（_Scalar），行数（_Rows）和列数（ _Cols）。 矩阵定义时可以使用Dynamic来表示矩阵的行列数为未知，例如：\ntypedef Matrix\u0026lt;double,Dynamic, Dynamic\u0026gt; MatrixXd; 在Eigen中也提供了很多常见的简化定义形式，例如：\ntypedef Matrix\u0026lt; double , 3 , 1\u0026gt; Vector3d 注意：\n  Eigen中无论是矩阵还是数组、向量，无论是静态矩阵还是动态矩阵都提供默认构造函数，也就是你定义这些数据结构时都可以不用提供任何参数，其大小均由运行时来确定。\n  矩阵的构造函数中只提供行列数、元素类型的构造参数，而不提供元素值的构造，对于比较小的、固定长度的向量提供初始化元素的定义，例如：\n  Vector2d a(5.0, 6.0); Vector3d b(5.0, 6.0, 7.0); Vector4d c(5.0, 6.0, 7.0, 8.",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -89,10 +89,10 @@ code.has-jax {
     "accountablePerson" : "caicai",
     "copyrightHolder" : "caicai",
     "copyrightYear" : "2017",
-    "datePublished": "2017-01-04 23:59:59 \x2b0000 \x2b0000",
-    "dateModified" : "2017-01-04 23:59:59 \x2b0000 \x2b0000",
+    "datePublished": "2017-01-04 23:59:59 \u002b0000 UTC",
+    "dateModified" : "2017-01-04 23:59:59 \u002b0000 UTC",
     "url" : "https:\/\/ottsion.github.io\/2017\/2017-01-04-eigen-use-1\/",
-    "wordCount" : "446",
+    "wordCount" : "444",
     "keywords" : [ "eigen", "静心明志"]
 }
 </script>
@@ -218,31 +218,31 @@ Vector4d c(5.0, 6.0, 7.0, 8.0);
 </code></pre><h2 id="动态矩阵和静态矩阵">动态矩阵和静态矩阵</h2>
 <p>动态矩阵是指其大小在运行时确定，静态矩阵是指其大小在编译时确定，在Eigen中并未这样称呼矩阵。</p>
 <p>第一段代码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span><span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span><span style="color:#75715e">&lt;Eigen/Dense&gt;</span><span style="color:#75715e">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;Eigen/Dense&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> Eigen;
 <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
 {
-	MatrixXd m <span style="color:#f92672">=</span> MatrixXd<span style="color:#f92672">:</span><span style="color:#f92672">:</span>Random( <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>);
-	m <span style="color:#f92672">=</span> (m <span style="color:#f92672">+</span> MatrixXd<span style="color:#f92672">:</span><span style="color:#f92672">:</span>Constant( <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1.2</span> )) <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>;
-	cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">m = </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> m <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	MatrixXd m <span style="color:#f92672">=</span> MatrixXd<span style="color:#f92672">::</span>Random( <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>);
+	m <span style="color:#f92672">=</span> (m <span style="color:#f92672">+</span> MatrixXd<span style="color:#f92672">::</span>Constant( <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1.2</span> )) <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>;
+	cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;m = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl <span style="color:#f92672">&lt;&lt;</span> m <span style="color:#f92672">&lt;&lt;</span> endl;
 	VectorXd v(<span style="color:#ae81ff">3</span>);
-	v <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>;
-	cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">m*v = </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span>endl <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> m<span style="color:#f92672">*</span>v <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	v <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>;
+	cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;m*v = &#34;</span> <span style="color:#f92672">&lt;&lt;</span>endl <span style="color:#f92672">&lt;&lt;</span> m<span style="color:#f92672">*</span>v <span style="color:#f92672">&lt;&lt;</span> endl;
 }
 </code></pre></div><p>第二段代码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;  </span><span style="color:#75715e">
-</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;Eigen/Dense&gt;  </span><span style="color:#75715e">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;  </span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Eigen/Dense&gt;  </span><span style="color:#75715e">
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> Eigen;
 <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
 {
-	Matrix3d m <span style="color:#f92672">=</span> Matrix3d<span style="color:#f92672">:</span><span style="color:#f92672">:</span>Random(); 
-	m <span style="color:#f92672">=</span> (m <span style="color:#f92672">+</span> Matrix3d<span style="color:#f92672">:</span><span style="color:#f92672">:</span>Constant(<span style="color:#ae81ff">1.2</span>)) <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>; 
-	cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">m = </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> m <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	Matrix3d m <span style="color:#f92672">=</span> Matrix3d<span style="color:#f92672">::</span>Random(); 
+	m <span style="color:#f92672">=</span> (m <span style="color:#f92672">+</span> Matrix3d<span style="color:#f92672">::</span>Constant(<span style="color:#ae81ff">1.2</span>)) <span style="color:#f92672">*</span> <span style="color:#ae81ff">50</span>; 
+	cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;m = &#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl <span style="color:#f92672">&lt;&lt;</span> m <span style="color:#f92672">&lt;&lt;</span> endl;
 	Vector3d v(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>); 
-	cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">m*v = </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span>endl <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> m<span style="color:#f92672">*</span>v <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> endl;
+	cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;m*v = &#34;</span> <span style="color:#f92672">&lt;&lt;</span>endl <span style="color:#f92672">&lt;&lt;</span> m<span style="color:#f92672">*</span>v <span style="color:#f92672">&lt;&lt;</span> endl;
 }
 </code></pre></div><p>第一段的运行结果：</p>
 <pre><code>before m = 

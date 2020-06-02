@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Fengcai.Sun">
+  
+  
+  
+  <link rel="prev" href="https://ottsion.github.io/2020/pycharm_ssh_upload_fail/" />
+  
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+  <link rel="canonical" href="https://ottsion.github.io/2020/docker_mysql_change_password/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           如何强制更改Docker容器中的Mysql密码 | 静心明志
+       
+  </title>
+  <meta name="title" content="如何强制更改Docker容器中的Mysql密码 | 静心明志">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/ottsion.github.io"
+    },
+    "articleSection" : "posts",
+    "name" : "如何强制更改Docker容器中的Mysql密码",
+    "headline" : "如何强制更改Docker容器中的Mysql密码",
+    "description" : "转自：https:\/\/blog.csdn.net\/fastlearn\/article\/details\/80511661\n解决步骤   增加“忘记密码启动”模式\n  重新设置root密码\n  删掉“忘记密码启动”模式\n  重启容器镜像即可\n  具体操作  通过docker exec命令进入容器内  docker exec -it db002 \/bin\/bash # 注：db002是我安装mysql数据库的容器名  编辑mysql配置文件，增加“忘记密码启动”模式：skip-grant-tables  vi \/etc\/mysql\/conf.d\/docker.cnf # 添加这句 skip-grant-tables 最终配置文件docker.cnf内容如下：\n[mysqld] skip-host-cache skip-name-resolve skip-grant-tables  退出容器，重启容器实例  exit  通过步骤1再次进入容器，输入myql命令，免密码直接登录mysql  mysql  设置root用户新密码：a123456。刷新权限，退出mysql  #切换实例，user表位于mysql实例下 mysql\u0026gt; use mysql; #更改root密码 mysql\u0026gt; UPDATE user SET Password = password ( \u0027a123456\u0027 ) WHERE User = \u0027root\u0027; # mysql5.",
+    "inLanguage" : "en-us",
+    "author" : "caicai",
+    "creator" : "caicai",
+    "publisher": "caicai",
+    "accountablePerson" : "caicai",
+    "copyrightHolder" : "caicai",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-06-02 10:58:24 \u002b0800 \u002b0800",
+    "dateModified" : "2020-06-02 10:58:24 \u002b0800 \u002b0800",
+    "url" : "https:\/\/ottsion.github.io\/2020\/docker_mysql_change_password\/",
+    "wordCount" : "74",
+    "keywords" : [ "docker","mysql", "静心明志"]
+}
+</script>
+
+</head>
+
+  
+
+
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ottsion.github.io">静心明志</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/about/" title=""></a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ottsion.github.io">静心明志</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+                <a class="menu-item" href="/about/" title=""></a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">如何强制更改Docker容器中的Mysql密码</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://ottsion.github.io" rel="author">caicai</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-06-02 itemprop="datePublished">June 2, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://ottsion.github.io/categories/bugs/"> bugs </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>转自：https://blog.csdn.net/fastlearn/article/details/80511661</p>
+<h2 id="解决步骤">解决步骤</h2>
+<ul>
+<li>
+<p>增加“忘记密码启动”模式</p>
+</li>
+<li>
+<p>重新设置root密码</p>
+</li>
+<li>
+<p>删掉“忘记密码启动”模式</p>
+</li>
+<li>
+<p>重启容器镜像即可</p>
+</li>
+</ul>
+<h2 id="具体操作">具体操作</h2>
+<ul>
+<li>通过docker exec命令进入容器内</li>
+</ul>
+<pre><code>docker exec -it db002 /bin/bash
+# 注：db002是我安装mysql数据库的容器名
+</code></pre><ul>
+<li>编辑mysql配置文件，增加“忘记密码启动”模式：skip-grant-tables</li>
+</ul>
+<pre><code>vi /etc/mysql/conf.d/docker.cnf
+# 添加这句
+skip-grant-tables 
+</code></pre><p>最终配置文件docker.cnf内容如下：</p>
+<pre><code>[mysqld]
+skip-host-cache
+skip-name-resolve
+skip-grant-tables
+</code></pre><ul>
+<li>退出容器，重启容器实例</li>
+</ul>
+<pre><code>exit
+</code></pre><ul>
+<li>通过步骤1再次进入容器，输入myql命令，免密码直接登录mysql</li>
+</ul>
+<pre><code>mysql
+</code></pre><ul>
+<li>设置root用户新密码：a123456。刷新权限，退出mysql</li>
+</ul>
+<pre><code>#切换实例，user表位于mysql实例下
+mysql&gt; use mysql;
+#更改root密码
+mysql&gt; UPDATE user SET Password = password ( 'a123456' ) WHERE User = 'root';
+# mysql5.7使用这句：
+mysql&gt; update mysql.user set authentication_string=password('a123456') where user='root';
+</code></pre><h1 id="刷新权限">刷新权限</h1>
+<pre><code>mysql&gt; flush privileges;
+</code></pre><h1 id="退出">退出</h1>
+<pre><code>mysql&gt; quit
+</code></pre><ol start="6">
+<li>重新编辑mysql配置文件docker.cnf，删掉“忘记密码启动”模式</li>
+</ol>
+<pre><code>vi /etc/mysql/conf.d/docker.cnf
+</code></pre><ol start="7">
+<li>退出容器，重启容器即可</li>
+</ol>
+<pre><code>docker restart db002
+</code></pre>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Fengcai.Sun </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://ottsion.github.io/2020/docker_mysql_change_password/>https://ottsion.github.io/2020/docker_mysql_change_password/</span>
+            </p>
+            
+            <span id="busuanzi_container_page_pv">
+                本文总阅读量: <span id="busuanzi_value_page_pv"></span>
+            </span>
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://ottsion.github.io/tags/docker/">
+                    #docker</a></span>
+            
+            <span class="tag"><a href="https://ottsion.github.io/tags/mysql/">
+                    #mysql</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://ottsion.github.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://ottsion.github.io/2020/pycharm_ssh_upload_fail/" class="prev" rel="prev" title="Pycharm中远程上传项目失败"><i class="iconfont icon-left"></i>&nbsp;Pycharm中远程上传项目失败</a>
+         
+        
+    </div>
+
+    
+    <div class="post-comment">
+        
+        
+
+<div id="vcomments"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.7/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+  new Valine({
+      el: '#vcomments' ,
+      appId: 'aq7KX6LvEUKuYC1FReOy9Rq8-gzGzoHsz',
+      appKey: 'AJWv8xzYkd8tJ23S38zDK3TN',
+      notify: 'false', 
+      verify: 'false', 
+      avatar:'mm', 
+      placeholder: '说点什么吧...',
+      visitor: 'true'
+  });
+</script>
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://ottsion.github.io">Fengcai.Sun</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

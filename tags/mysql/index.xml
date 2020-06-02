@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql on 静心明志</title>
+    <link>https://ottsion.github.io/tags/mysql/</link>
+    <description>Recent content in mysql on 静心明志</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jun 2020 10:58:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://ottsion.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何强制更改Docker容器中的Mysql密码</title>
+      <link>https://ottsion.github.io/2020/docker_mysql_change_password/</link>
+      <pubDate>Tue, 02 Jun 2020 10:58:24 +0800</pubDate>
+      
+      <guid>https://ottsion.github.io/2020/docker_mysql_change_password/</guid>
+      <description>转自：https://blog.csdn.net/fastlearn/article/details/80511661
+解决步骤   增加“忘记密码启动”模式
+  重新设置root密码
+  删掉“忘记密码启动”模式
+  重启容器镜像即可
+  具体操作  通过docker exec命令进入容器内  docker exec -it db002 /bin/bash # 注：db002是我安装mysql数据库的容器名  编辑mysql配置文件，增加“忘记密码启动”模式：skip-grant-tables  vi /etc/mysql/conf.d/docker.cnf # 添加这句 skip-grant-tables 最终配置文件docker.cnf内容如下：
+[mysqld] skip-host-cache skip-name-resolve skip-grant-tables  退出容器，重启容器实例  exit  通过步骤1再次进入容器，输入myql命令，免密码直接登录mysql  mysql  设置root用户新密码：a123456。刷新权限，退出mysql  #切换实例，user表位于mysql实例下 mysql&amp;gt; use mysql; #更改root密码 mysql&amp;gt; UPDATE user SET Password = password ( &#39;a123456&#39; ) WHERE User = &#39;root&#39;; # mysql5.</description>
+    </item>
+    
+  </channel>
+</rss>

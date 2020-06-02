@@ -39,7 +39,7 @@ $T^{-1}=\begin{bmatrix}R^T&amp;amp;-R^Tt\0^T&amp;amp;1\end{bmatrix}$
 方向为旋转轴、长度为转过的角度：$w=\theta n$
 角轴与旋转矩阵的不同:
  旋转矩阵：九个量，有正交性约束和行列式值约束 角轴：三个量，没有约束 注意它们只是表达方式的不同，但表达的东西可以是同一个 角轴也就是第四章要介绍的李代数  转换关系：
- 轴角转旋转矩阵：罗德里格斯公式（Rodrigues&#39;s Formula ）：  $R=\cos\theta I+(1-\cos\theta)nn^T+\sin\theta\hat{n}$
+ 轴角转旋转矩阵：罗德里格斯公式（Rodrigues&amp;rsquo;s Formula ）：  $R=\cos\theta I+(1-\cos\theta)nn^T+\sin\theta\hat{n}$
 旋转矩阵转轴角：  角度：$\theta=\arccos(\frac{tr(R)-1}{2})$</description>
     </item>
     

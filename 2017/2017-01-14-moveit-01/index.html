@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : "ROS moveit随便看看源码",
     "headline" : "ROS moveit随便看看源码",
-    "description" : "星期六, 14. 一月 2017 10:31上午\n 主要看看路径规划在moveit里到底咋作的\n   利用moveit进行机械臂路径规划很简单，利用 moveit_commander.move_group.MoveGroupCommander类即可， 类中有go方法和plan、execute两种选择，今天看一下深入plan里面到底怎么写。\n plan方法 def moveit_commander.move_group.MoveGroupCommander.plan ( self,\rjoints = None )\r Return a motion plan (a RobotTrajectory) to the set goal state (or specified by the joints argument) Definition at line 425 of file move_group.py.  进入代码发现写的是：\n def plan(self, joints = None):\r\x26quot;\x26quot;\x26quot; Return a motion plan (a RobotTrajectory) to the set goal state (or specified by the joints argument) \x26quot;\x26quot;\x26quot;\rif type(joints) is JointState:\rself.",
+    "description" : "星期六, 14. 一月 2017 10:31上午\n 主要看看路径规划在moveit里到底咋作的\n   利用moveit进行机械臂路径规划很简单，利用 moveit_commander.move_group.MoveGroupCommander类即可， 类中有go方法和plan、execute两种选择，今天看一下深入plan里面到底怎么写。\n plan方法 def moveit_commander.move_group.MoveGroupCommander.plan ( self, joints = None )  Return a motion plan (a RobotTrajectory) to the set goal state (or specified by the joints argument) Definition at line 425 of file move_group.py.  进入代码发现写的是：\n def plan(self, joints = None): \u0026quot;\u0026quot;\u0026quot; Return a motion plan (a RobotTrajectory) to the set goal state (or specified by the joints argument) \u0026quot;\u0026quot;\u0026quot; if type(joints) is JointState: self.",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -89,8 +89,8 @@ code.has-jax {
     "accountablePerson" : "caicai",
     "copyrightHolder" : "caicai",
     "copyrightYear" : "2017",
-    "datePublished": "2017-01-14 23:59:59 \x2b0000 \x2b0000",
-    "dateModified" : "2017-01-14 23:59:59 \x2b0000 \x2b0000",
+    "datePublished": "2017-01-14 23:59:59 \u002b0000 UTC",
+    "dateModified" : "2017-01-14 23:59:59 \u002b0000 UTC",
     "url" : "https:\/\/ottsion.github.io\/2017\/2017-01-14-moveit-01\/",
     "wordCount" : "1340",
     "keywords" : [ "moveit", "静心明志"]
@@ -406,7 +406,7 @@ bool 	waitForServer (const ros::Duration &amp;timeout=ros::Duration(0, 0)) const
     ~SimpleActionClient ()
 </code></pre>
 <p>其中<code>sendGoal (const Goal &amp;goal, SimpleDoneCallback done_cb=SimpleDoneCallback(), SimpleActiveCallback active_cb=SimpleActiveCallback(), SimpleFeedbackCallback feedback_cb=SimpleFeedbackCallback())</code>的函数主要意义是：
-Sends a goal to the ActionServer, and also registers callbacks. 
+Sends a goal to the ActionServer, and also registers callbacks.
 查看simple_action_client.h：</p>
 
     </div>

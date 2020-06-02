@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : " 先锋机器人在ROS上的安装",
     "headline" : " 先锋机器人在ROS上的安装",
-    "description" : "一. 安装Ubuntu### 第一步首先需要给先锋机器人配置Ubuntu环境，这里选用Ubuntu14.04版本进行安装，安装步骤一般为：\n 制作Ubuntu14.04的U盘启动器 2.进入先锋机器人BIOS界面设置U盘启动，这里我试了F2、Esc、F10、F12。。。。都没起作用，最后找了个带$F_n$的键盘，一通$F_n\x2bEsc\x2bshift\x2bctrl\x2bDel\x2bF12$结果进入了。。。具体不清楚哪个起作用了。 按照一般双系统做法进行了系统安装，记得选磁盘一定要选择other那个，别直接默认结果格式化了已有的磁盘。  官方\n二.安装ROS### 安装原文：点击进入\n Setup your sources.list Setup your computer to accept software from packages.ros.org.  sudosh-c\x27echo\x26quot;debhttp:\/\/packages.ros.org\/ros\/ubuntu$(lsb_release-sc)main\x26quot;\x26gt;\/etc\/apt\/sources.list.d\/ros-latest.list\x27\rSet up your keys  sudo apt-key adv --keyserver hkp:\/\/ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116\rInstallation  sudo apt-get update\rsudo apt-get install ros-indigo-desktop-full\rapt-cache search ros-indigo\rsudo rosdep init\rrosdep update\recho \x26quot;source \/opt\/ros\/indigo\/setup.bash\x26quot; \x26gt;\x26gt; ~\/.bashrc\rsource ~\/.bashrc\rsudo apt-get install python-rosinstall\r###三.安装ROSARIA###\n安装原文：官方信息\ncd ~\/catkin_ws\/src\rgit clone https:\/\/github.",
+    "description" : "一. 安装Ubuntu### 第一步首先需要给先锋机器人配置Ubuntu环境，这里选用Ubuntu14.04版本进行安装，安装步骤一般为：\n 制作Ubuntu14.04的U盘启动器 2.进入先锋机器人BIOS界面设置U盘启动，这里我试了F2、Esc、F10、F12。。。。都没起作用，最后找了个带$F_n$的键盘，一通$F_n\u002bEsc\u002bshift\u002bctrl\u002bDel\u002bF12$结果进入了。。。具体不清楚哪个起作用了。 按照一般双系统做法进行了系统安装，记得选磁盘一定要选择other那个，别直接默认结果格式化了已有的磁盘。  官方\n二.安装ROS### 安装原文：点击进入\n Setup your sources.list Setup your computer to accept software from packages.ros.org.  sudosh-c\u0027echo\u0026quot;debhttp:\/\/packages.ros.org\/ros\/ubuntu$(lsb_release-sc)main\u0026quot;\u0026gt;\/etc\/apt\/sources.list.d\/ros-latest.list\u0027 Set up your keys  sudo apt-key adv --keyserver hkp:\/\/ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116 Installation  sudo apt-get update sudo apt-get install ros-indigo-desktop-full apt-cache search ros-indigo sudo rosdep init rosdep update echo \u0026quot;source \/opt\/ros\/indigo\/setup.bash\u0026quot; \u0026gt;\u0026gt; ~\/.bashrc source ~\/.bashrc sudo apt-get install python-rosinstall ###三.安装ROSARIA###\n安装原文：官方信息\ncd ~\/catkin_ws\/src git clone https:\/\/github.",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -89,8 +89,8 @@ code.has-jax {
     "accountablePerson" : "caicai",
     "copyrightHolder" : "caicai",
     "copyrightYear" : "2017",
-    "datePublished": "2017-06-22 23:59:59 \x2b0000 \x2b0000",
-    "dateModified" : "2017-06-22 23:59:59 \x2b0000 \x2b0000",
+    "datePublished": "2017-06-22 23:59:59 \u002b0000 UTC",
+    "dateModified" : "2017-06-22 23:59:59 \u002b0000 UTC",
     "url" : "https:\/\/ottsion.github.io\/2017\/2017-06-22-pioneer-ros-setup\/",
     "wordCount" : "105",
     "keywords" : [ "ros, pioneer", "静心明志"]
@@ -223,7 +223,7 @@ sudo apt-get install python-rosinstall
 git clone https://github.com/amor-ros-pkg/rosaria.git
 </code></pre><p>下载驱动部分：<a href="http://robots.mobilerobots.com/wiki/Aria">地址</a> ，得到libaria_2.9.1+ubuntu12_amd64.deb。</p>
 <p>安装：
-<code>sudo dpkg -i libaria_2.9.1+ubuntu12_amd64.deb</code>	
+<code>sudo dpkg -i libaria_2.9.1+ubuntu12_amd64.deb</code>
 更新：</p>
 <pre><code>sudo apt-get update
 sudo apt-get upgrade

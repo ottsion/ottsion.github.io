@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : "11.盛最多水的容器",
     "headline" : "11.盛最多水的容器",
-    "description" : "给定 n 个非负整数 a1，a2，\x26hellip;，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。\n**说明：**你不能倾斜容器，且 n 的值至少为 2。\n图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。\n示例:\n输入: [1,8,6,2,5,4,8,3,7]\r输出: 49\r代码：\nclass Solution {\rpublic int maxArea(int[] height) {\rint maxeara = 0;\rint i=0, j=height.length-1;\rwhile(i\x26lt;j){\rmaxeara = Math.max(maxeara, Math.min(height[i], height[j])*(j-i));\rif(height[i]\x26gt;height[j]) j--;\relse i\x2b\x2b;\r}\rreturn maxeara;\r}\r}\r",
+    "description" : "给定 n 个非负整数 a1，a2，\u0026hellip;，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。\n**说明：**你不能倾斜容器，且 n 的值至少为 2。\n图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。\n示例:\n输入: [1,8,6,2,5,4,8,3,7] 输出: 49 代码：\nclass Solution { public int maxArea(int[] height) { int maxeara = 0; int i=0, j=height.length-1; while(i\u0026lt;j){ maxeara = Math.max(maxeara, Math.min(height[i], height[j])*(j-i)); if(height[i]\u0026gt;height[j]) j--; else i\u002b\u002b; } return maxeara; } } ",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -89,8 +89,8 @@ code.has-jax {
     "accountablePerson" : "caicai",
     "copyrightHolder" : "caicai",
     "copyrightYear" : "2019",
-    "datePublished": "2019-05-09 16:57:00 \x2b0800 CST",
-    "dateModified" : "2019-05-09 16:57:00 \x2b0800 CST",
+    "datePublished": "2019-05-09 16:57:00 \u002b0800 \u002b0800",
+    "dateModified" : "2019-05-09 16:57:00 \u002b0800 \u002b0800",
     "url" : "https:\/\/ottsion.github.io\/2019\/%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8\/",
     "wordCount" : "61",
     "keywords" : [ "algorithm","java", "静心明志"]
@@ -195,17 +195,17 @@ code.has-jax {
 <p><img src="/images/blog/%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8.jpg" alt=""></p>
 <p>图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。</p>
 <p><strong>示例:</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">输</span><span style="color:#960050;background-color:#1e0010">入</span>: [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">7</span>]
-<span style="color:#960050;background-color:#1e0010">输</span><span style="color:#960050;background-color:#1e0010">出</span>: <span style="color:#ae81ff">49</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">输入</span>: [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">7</span>]
+<span style="color:#960050;background-color:#1e0010">输出</span>: <span style="color:#ae81ff">49</span>
 </code></pre></div><p><strong>代码：</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maxArea</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> height<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maxArea</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> height<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">int</span> maxeara <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
         <span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">,</span> j<span style="color:#f92672">=</span>height<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>i<span style="color:#f92672">&lt;</span>j<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
-            maxeara <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>maxeara<span style="color:#f92672">,</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>height<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">,</span> height<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">*</span><span style="color:#f92672">(</span>j<span style="color:#f92672">-</span>i<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>height<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">&gt;</span>height<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">)</span> j<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">;</span>
-            <span style="color:#66d9ef">else</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>i<span style="color:#f92672">&lt;</span>j<span style="color:#f92672">){</span>
+            maxeara <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>maxeara<span style="color:#f92672">,</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>height<span style="color:#f92672">[</span>i<span style="color:#f92672">],</span> height<span style="color:#f92672">[</span>j<span style="color:#f92672">])*(</span>j<span style="color:#f92672">-</span>i<span style="color:#f92672">));</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>height<span style="color:#f92672">[</span>i<span style="color:#f92672">]&gt;</span>height<span style="color:#f92672">[</span>j<span style="color:#f92672">])</span> j<span style="color:#f92672">--;</span>
+            <span style="color:#66d9ef">else</span> i<span style="color:#f92672">++;</span>
         <span style="color:#f92672">}</span>
         <span style="color:#66d9ef">return</span> maxeara<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>

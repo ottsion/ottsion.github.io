@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : "198.打家劫舍",
     "headline" : "198.打家劫舍",
-    "description" : "你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。\n给定一个代表每个房屋存放金额的非负整数数组，计算你**在不触动警报装置的情况下，**能够偷窃到的最高金额。\n示例 1:\n输入: [1,2,3,1]\r输出: 4\r解释: 偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。\r偷窃到的最高金额 = 1 \x2b 3 = 4 。\r示例 2:\n输入: [2,7,9,3,1]\r输出: 12\r解释: 偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。\r偷窃到的最高金额 = 2 \x2b 9 \x2b 1 = 12 。\r代码：\npublic static int rob(int[] nums) {\rint length = nums.",
+    "description" : "你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。\n给定一个代表每个房屋存放金额的非负整数数组，计算你**在不触动警报装置的情况下，**能够偷窃到的最高金额。\n示例 1:\n输入: [1,2,3,1] 输出: 4 解释: 偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。 偷窃到的最高金额 = 1 \u002b 3 = 4 。 示例 2:\n输入: [2,7,9,3,1] 输出: 12 解释: 偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。 偷窃到的最高金额 = 2 \u002b 9 \u002b 1 = 12 。 代码：\npublic static int rob(int[] nums) { int length = nums.",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -89,8 +89,8 @@ code.has-jax {
     "accountablePerson" : "caicai",
     "copyrightHolder" : "caicai",
     "copyrightYear" : "2019",
-    "datePublished": "2019-05-09 17:45:45 \x2b0800 CST",
-    "dateModified" : "2019-05-09 17:45:45 \x2b0800 CST",
+    "datePublished": "2019-05-09 17:45:45 \u002b0800 \u002b0800",
+    "dateModified" : "2019-05-09 17:45:45 \u002b0800 \u002b0800",
     "url" : "https:\/\/ottsion.github.io\/2019\/%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D\/",
     "wordCount" : "118",
     "keywords" : [ "algorithm","java", "静心明志"]
@@ -200,20 +200,20 @@ code.has-jax {
 解释: 偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。
      偷窃到的最高金额 = 2 + 9 + 1 = 12 。
 </code></pre><p><strong>代码：</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">rob</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">rob</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>length <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">)</span>
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>length <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
             <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
         <span style="color:#66d9ef">int</span> before<span style="color:#f92672">=</span>0<span style="color:#f92672">,</span> now<span style="color:#f92672">=</span>0<span style="color:#f92672">,</span> temp<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i<span style="color:#f92672">&lt;</span>length<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span><span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i<span style="color:#f92672">=</span><span style="color:#f92672">=</span>0<span style="color:#f92672">)</span>
-                now <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
-            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i<span style="color:#f92672">=</span><span style="color:#f92672">=</span>1<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i<span style="color:#f92672">&lt;</span>length<span style="color:#f92672">;</span> i<span style="color:#f92672">++){</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i<span style="color:#f92672">==</span>0<span style="color:#f92672">)</span>
+                now <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>0<span style="color:#f92672">];</span>
+            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i<span style="color:#f92672">==</span>1<span style="color:#f92672">){</span>
                 before <span style="color:#f92672">=</span> now<span style="color:#f92672">;</span>
-                now <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">,</span> nums<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                now <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>0<span style="color:#f92672">],</span> nums<span style="color:#f92672">[</span>1<span style="color:#f92672">]);</span>
             <span style="color:#f92672">}</span>
-            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i<span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span>2<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
-                temp <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>before<span style="color:#f92672">+</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">,</span> now<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i<span style="color:#f92672">&gt;=</span>2<span style="color:#f92672">){</span>
+                temp <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>before<span style="color:#f92672">+</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">],</span> now<span style="color:#f92672">);</span>
                 before <span style="color:#f92672">=</span> now<span style="color:#f92672">;</span>
                 now <span style="color:#f92672">=</span> temp<span style="color:#f92672">;</span>
             <span style="color:#f92672">}</span>

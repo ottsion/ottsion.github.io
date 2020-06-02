@@ -2,9 +2,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://ottsion.github.io/tags/beta%E5%88%86%E5%B8%83/</loc>
+      <loc>https://ottsion.github.io/categories/bugs/</loc>
       
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
+      <lastmod>2020-06-02T10:58:24+08:00</lastmod>
       
       
       
@@ -14,7 +14,7 @@
     <url>
       <loc>https://ottsion.github.io/categories/</loc>
       
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
+      <lastmod>2020-06-02T10:58:24+08:00</lastmod>
       
       
       
@@ -22,19 +22,9 @@
     </url>
   
     <url>
-      <loc>https://ottsion.github.io/tags/dirichlet%E5%88%86%E5%B8%83/</loc>
+      <loc>https://ottsion.github.io/tags/docker/</loc>
       
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://ottsion.github.io/tags/gamma%E5%88%86%E5%B8%83/</loc>
-      
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
+      <lastmod>2020-06-02T10:58:24+08:00</lastmod>
       
       
       
@@ -42,59 +32,9 @@
     </url>
   
     <url>
-      <loc>https://ottsion.github.io/tags/gibbs%E9%87%87%E6%A0%B7/</loc>
+      <loc>https://ottsion.github.io/tags/mysql/</loc>
       
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://ottsion.github.io/tags/lda/</loc>
-      
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://ottsion.github.io/2020/lda/</loc>
-      
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://ottsion.github.io/tags/ml/</loc>
-      
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://ottsion.github.io/categories/ml/</loc>
-      
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://ottsion.github.io/tags/plsa/</loc>
-      
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
+      <lastmod>2020-06-02T10:58:24+08:00</lastmod>
       
       
       
@@ -104,7 +44,7 @@
     <url>
       <loc>https://ottsion.github.io/posts/</loc>
       
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
+      <lastmod>2020-06-02T10:58:24+08:00</lastmod>
       
       
       
@@ -114,7 +54,17 @@
     <url>
       <loc>https://ottsion.github.io/tags/</loc>
       
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
+      <lastmod>2020-06-02T10:58:24+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://ottsion.github.io/2020/docker_mysql_change_password/</loc>
+      
+      <lastmod>2020-06-02T10:58:24+08:00</lastmod>
       
       
       
@@ -124,7 +74,7 @@
     <url>
       <loc>https://ottsion.github.io/</loc>
       
-      <lastmod>2020-02-24T15:57:32+08:00</lastmod>
+      <lastmod>2020-06-02T10:58:24+08:00</lastmod>
       
       
       
@@ -132,9 +82,9 @@
     </url>
   
     <url>
-      <loc>https://ottsion.github.io/tags/em/</loc>
+      <loc>https://ottsion.github.io/tags/pycharm/</loc>
       
-      <lastmod>2020-02-19T09:39:04+08:00</lastmod>
+      <lastmod>2020-05-26T16:58:24+08:00</lastmod>
       
       
       
@@ -142,9 +92,9 @@
     </url>
   
     <url>
-      <loc>https://ottsion.github.io/2020/em/</loc>
+      <loc>https://ottsion.github.io/2020/pycharm_ssh_upload_fail/</loc>
       
-      <lastmod>2020-02-19T09:39:04+08:00</lastmod>
+      <lastmod>2020-05-26T16:58:24+08:00</lastmod>
       
       
       
@@ -182,7 +132,7 @@
     </url>
   
     <url>
-      <loc>https://ottsion.github.io/categories/algorithm/</loc>
+      <loc>https://ottsion.github.io/tags/algorithm/</loc>
       
       <lastmod>2019-05-24T17:37:20+08:00</lastmod>
       
@@ -192,7 +142,7 @@
     </url>
   
     <url>
-      <loc>https://ottsion.github.io/tags/algorithm/</loc>
+      <loc>https://ottsion.github.io/categories/algorithm/</loc>
       
       <lastmod>2019-05-24T17:37:20+08:00</lastmod>
       
@@ -632,6 +582,16 @@
     </url>
   
     <url>
+      <loc>https://ottsion.github.io/tags/ml/</loc>
+      
+      <lastmod>2017-05-11T23:59:59+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
       <loc>https://ottsion.github.io/tags/ml-boosting/</loc>
       
       <lastmod>2017-05-11T23:59:59+00:00</lastmod>
@@ -702,7 +662,7 @@
     </url>
   
     <url>
-      <loc>https://ottsion.github.io/categories/python/</loc>
+      <loc>https://ottsion.github.io/tags/python/</loc>
       
       <lastmod>2017-05-11T23:59:59+00:00</lastmod>
       
@@ -712,7 +672,7 @@
     </url>
   
     <url>
-      <loc>https://ottsion.github.io/tags/python/</loc>
+      <loc>https://ottsion.github.io/categories/python/</loc>
       
       <lastmod>2017-05-11T23:59:59+00:00</lastmod>
       

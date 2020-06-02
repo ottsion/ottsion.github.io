@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pycharm on 静心明志</title>
+    <link>https://ottsion.github.io/tags/pycharm/</link>
+    <description>Recent content in pycharm on 静心明志</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 May 2020 16:58:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://ottsion.github.io/tags/pycharm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pycharm中远程上传项目失败</title>
+      <link>https://ottsion.github.io/2020/pycharm_ssh_upload_fail/</link>
+      <pubDate>Tue, 26 May 2020 16:58:24 +0800</pubDate>
+      
+      <guid>https://ottsion.github.io/2020/pycharm_ssh_upload_fail/</guid>
+      <description>问题：
+使用pycharm远程开发，新建了一个项目去连接远端python解释器，发现No files or folders found to process
+[2020/2/17 21:14] No files or folders found to process [2020/2/17 21:15] Upload to user1@10.xxx.xxx.xxx:22 (2) [2020/2/17 21:26] Download from xxx [2020/2/17 21:26] No files or folders found to process 解决方法：
+进入：tools - deployment - configuration
+左侧选择对应的远端python，右侧Connection中Web server URL填写http:///， 一般出问题是因为这里默认http://
+重新upload即可</description>
+    </item>
+    
+  </channel>
+</rss>

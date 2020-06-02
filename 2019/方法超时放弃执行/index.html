@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : "方法超时放弃执行",
     "headline" : "方法超时放弃执行",
-    "description" : "遇到一个比较不常见的情况，我在流水线式执行一个方法，方法中涉及到数据的获取，有时候获取很快，有时候十几分钟都没结果，因为我这个任务要追求时间效率，可以牺牲小部分异常，所以想到方法超时放弃这个想法：如果这个方法执行超过60秒，就直接pass继续执行下一次。\n具体其实是应用线程去实现这个想法：\nimport java.util.concurrent.Callable;\rimport java.util.concurrent.ExecutionException;\rimport java.util.concurrent.ExecutorService;\rimport java.util.concurrent.Executors;\rimport java.util.concurrent.TimeUnit;\rimport com.sun.corba.se.impl.orbutil.closure.Future;\rimport com.sun.corba.se.impl.orbutil.threadpool.TimeoutException;\rpublic class ThreadTest { public static void main(String[] args) throws InterruptedException, ExecutionException { final ExecutorService exec = Executors.newFixedThreadPool(1); Callable\x26lt;String\x26gt; task = new Callable\x26lt;String\x26gt;() { public String call() throws Exception { \/\/开始执行耗时操作  Thread.sleep(1000 * 5); return \x26#34;线程执行完成.\x26#34;; } }; try { Future\x26lt;String\x26gt; future = exec.submit(task); String obj = future.get(1, TimeUnit.SECOND); \/\/任务处理超时时间设为 1 秒  System.",
+    "description" : "遇到一个比较不常见的情况，我在流水线式执行一个方法，方法中涉及到数据的获取，有时候获取很快，有时候十几分钟都没结果，因为我这个任务要追求时间效率，可以牺牲小部分异常，所以想到方法超时放弃这个想法：如果这个方法执行超过60秒，就直接pass继续执行下一次。\n具体其实是应用线程去实现这个想法：\nimport java.util.concurrent.Callable; import java.util.concurrent.ExecutionException; import java.util.concurrent.ExecutorService; import java.util.concurrent.Executors; import java.util.concurrent.TimeUnit; import com.sun.corba.se.impl.orbutil.closure.Future; import com.sun.corba.se.impl.orbutil.threadpool.TimeoutException; public class ThreadTest { public static void main(String[] args) throws InterruptedException, ExecutionException { final ExecutorService exec = Executors.newFixedThreadPool(1); Callable\u0026lt;String\u0026gt; task = new Callable\u0026lt;String\u0026gt;() { public String call() throws Exception { \/\/开始执行耗时操作  Thread.sleep(1000 * 5); return \u0026#34;线程执行完成.\u0026#34;; } }; try { Future\u0026lt;String\u0026gt; future = exec.submit(task); String obj = future.get(1, TimeUnit.SECOND); \/\/任务处理超时时间设为 1 秒  System.",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -89,8 +89,8 @@ code.has-jax {
     "accountablePerson" : "caicai",
     "copyrightHolder" : "caicai",
     "copyrightYear" : "2019",
-    "datePublished": "2019-05-05 16:58:24 \x2b0800 CST",
-    "dateModified" : "2019-05-05 16:58:24 \x2b0800 CST",
+    "datePublished": "2019-05-05 16:58:24 \u002b0800 \u002b0800",
+    "dateModified" : "2019-05-05 16:58:24 \u002b0800 \u002b0800",
     "url" : "https:\/\/ottsion.github.io\/2019\/%E6%96%B9%E6%B3%95%E8%B6%85%E6%97%B6%E6%94%BE%E5%BC%83%E6%89%A7%E8%A1%8C\/",
     "wordCount" : "91",
     "keywords" : [ "java","thread", "静心明志"]
@@ -201,32 +201,32 @@ code.has-jax {
 <span style="color:#f92672">import</span> com.sun.corba.se.impl.orbutil.threadpool.TimeoutException<span style="color:#f92672">;</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ThreadTest</span> <span style="color:#f92672">{</span>  
   
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> InterruptedException<span style="color:#f92672">,</span>  
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> InterruptedException<span style="color:#f92672">,</span>  
             ExecutionException <span style="color:#f92672">{</span>  
           
-        <span style="color:#66d9ef">final</span> ExecutorService exec <span style="color:#f92672">=</span> Executors<span style="color:#f92672">.</span><span style="color:#a6e22e">newFixedThreadPool</span><span style="color:#f92672">(</span>1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>  
+        <span style="color:#66d9ef">final</span> ExecutorService exec <span style="color:#f92672">=</span> Executors<span style="color:#f92672">.</span><span style="color:#a6e22e">newFixedThreadPool</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>  
           
-        Callable<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> task <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Callable<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
-            <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">call</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>  
+        Callable<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> task <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Callable<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;()</span> <span style="color:#f92672">{</span>  
+            <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">call</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>  
                 <span style="color:#75715e">//开始执行耗时操作  
-</span><span style="color:#75715e"></span>                Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>1000 <span style="color:#f92672">*</span> 5<span style="color:#f92672">)</span><span style="color:#f92672">;</span>  
+</span><span style="color:#75715e"></span>                Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>1000 <span style="color:#f92672">*</span> 5<span style="color:#f92672">);</span>  
                 <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;线程执行完成.&#34;</span><span style="color:#f92672">;</span>  
             <span style="color:#f92672">}</span>  
-        <span style="color:#f92672">}</span><span style="color:#f92672">;</span>  
+        <span style="color:#f92672">};</span>  
           
         <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>  
-            Future<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> future <span style="color:#f92672">=</span> exec<span style="color:#f92672">.</span><span style="color:#a6e22e">submit</span><span style="color:#f92672">(</span>task<span style="color:#f92672">)</span><span style="color:#f92672">;</span>  
-            String obj <span style="color:#f92672">=</span> future<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> TimeUnit<span style="color:#f92672">.</span><span style="color:#a6e22e">SECOND</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span> <span style="color:#75715e">//任务处理超时时间设为 1 秒  
-</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;任务成功返回:&#34;</span> <span style="color:#f92672">+</span> obj<span style="color:#f92672">)</span><span style="color:#f92672">;</span>  
+            Future<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> future <span style="color:#f92672">=</span> exec<span style="color:#f92672">.</span><span style="color:#a6e22e">submit</span><span style="color:#f92672">(</span>task<span style="color:#f92672">);</span>  
+            String obj <span style="color:#f92672">=</span> future<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> TimeUnit<span style="color:#f92672">.</span><span style="color:#a6e22e">SECOND</span><span style="color:#f92672">);</span> <span style="color:#75715e">//任务处理超时时间设为 1 秒  
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;任务成功返回:&#34;</span> <span style="color:#f92672">+</span> obj<span style="color:#f92672">);</span>  
         <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>TimeoutException ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;处理超时啦....&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>  
-            ex<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>  
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;处理超时啦....&#34;</span><span style="color:#f92672">);</span>  
+            ex<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>  
         <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;处理失败.&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>  
-            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>  
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;处理失败.&#34;</span><span style="color:#f92672">);</span>  
+            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>  
         <span style="color:#f92672">}</span>  
         <span style="color:#75715e">// 关闭线程池  
-</span><span style="color:#75715e"></span>        exec<span style="color:#f92672">.</span><span style="color:#a6e22e">shutdown</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>  
+</span><span style="color:#75715e"></span>        exec<span style="color:#f92672">.</span><span style="color:#a6e22e">shutdown</span><span style="color:#f92672">();</span>  
     <span style="color:#f92672">}</span>  
 <span style="color:#f92672">}</span>  
 </code></pre></div>

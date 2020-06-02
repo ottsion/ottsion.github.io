@@ -79,9 +79,9 @@ code.has-jax {
          "@id": "https:\/\/ottsion.github.io"
     },
     "articleSection" : "posts",
-    "name" : " KinectV2\x2bUbuntu 14.04\x2bRos 安装教程",
-    "headline" : " KinectV2\x2bUbuntu 14.04\x2bRos 安装教程",
-    "description" : "前言 ​ 个人理解错误的地方还请不吝赐教，转载请标明出处，内容如有改动更新，请看原博：http:\/\/www.cnblogs.com\/hitcm\/\n​ Kinect V2在Ubuntu下的开发问题，首先需要弄清楚的是你的设备是V1还是V2，这两个的驱动是不能通用的。\n如下是V2（上）和V1（下）。看看自己的设备，然后再决定用哪个安装方案。\n​ 本文针对的是V2的情况。\n\n 安装 1、首先git下载代码，很快下载好，放到~下面\ngit clone https:\/\/github.com\/OpenKinect\/libfreenect2.git\n2、然后安装依赖项如下,最好事先编译安装好OpenCV\nsudo apt-get install build-essential cmake pkg-config libturbojpeg libjpeg-turbo8-dev mesa-common-dev freeglut3-dev libxrandr-dev libxi-dev\n3、然后安装libusb。此处需要添加一个PPA，就是下面的第一行命令，不然绝逼是装不上的。\nsudo apt-add-repository ppa:floe\/libusb\rsudo apt-get update\rsudo apt-get install libusb-1.0-0-dev\r4、接着运行下面的命令，安装GLFW3\nsudo apt-get install libglfw3-dev\n如果没有成功的话，使用下面的命令，来代替上面的\ncd libfreenect2\/depends\rsh install_ubuntu.sh\rsudo dpkg -i libglfw3*_3.0.4-1_*.deb\r5、然后安装OpenCL的支持库（不打算使用GPU，这一步直接跳过没做）\n6、接着编译库\ncd ..\rmkdir build \x26amp;\x26amp; cd build\rcmake ..\rmake\rsudo make install\r 测试 最后可以运行程序.",
+    "name" : " KinectV2\u002bUbuntu 14.04\u002bRos 安装教程",
+    "headline" : " KinectV2\u002bUbuntu 14.04\u002bRos 安装教程",
+    "description" : "前言 ​ 个人理解错误的地方还请不吝赐教，转载请标明出处，内容如有改动更新，请看原博：http:\/\/www.cnblogs.com\/hitcm\/\n​ Kinect V2在Ubuntu下的开发问题，首先需要弄清楚的是你的设备是V1还是V2，这两个的驱动是不能通用的。\n如下是V2（上）和V1（下）。看看自己的设备，然后再决定用哪个安装方案。\n​ 本文针对的是V2的情况。\n\n 安装 1、首先git下载代码，很快下载好，放到~下面\ngit clone https:\/\/github.com\/OpenKinect\/libfreenect2.git\n2、然后安装依赖项如下,最好事先编译安装好OpenCV\nsudo apt-get install build-essential cmake pkg-config libturbojpeg libjpeg-turbo8-dev mesa-common-dev freeglut3-dev libxrandr-dev libxi-dev\n3、然后安装libusb。此处需要添加一个PPA，就是下面的第一行命令，不然绝逼是装不上的。\nsudo apt-add-repository ppa:floe\/libusb sudo apt-get update sudo apt-get install libusb-1.0-0-dev 4、接着运行下面的命令，安装GLFW3\nsudo apt-get install libglfw3-dev\n如果没有成功的话，使用下面的命令，来代替上面的\ncd libfreenect2\/depends sh install_ubuntu.sh sudo dpkg -i libglfw3*_3.0.4-1_*.deb 5、然后安装OpenCL的支持库（不打算使用GPU，这一步直接跳过没做）\n6、接着编译库\ncd .. mkdir build \u0026amp;\u0026amp; cd build cmake .. make sudo make install  测试 最后可以运行程序.",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -89,8 +89,8 @@ code.has-jax {
     "accountablePerson" : "caicai",
     "copyrightHolder" : "caicai",
     "copyrightYear" : "2017",
-    "datePublished": "2017-06-17 23:59:59 \x2b0000 \x2b0000",
-    "dateModified" : "2017-06-17 23:59:59 \x2b0000 \x2b0000",
+    "datePublished": "2017-06-17 23:59:59 \u002b0000 UTC",
+    "dateModified" : "2017-06-17 23:59:59 \u002b0000 UTC",
     "url" : "https:\/\/ottsion.github.io\/2017\/2017-06-17-ros-kinectv2-setup\/",
     "wordCount" : "114",
     "keywords" : [ "ros", "静心明志"]

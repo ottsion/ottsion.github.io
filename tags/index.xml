@@ -6,80 +6,35 @@
     <description>Recent content in Tags on 静心明志</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Feb 2020 15:57:32 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2020 10:58:24 +0800</lastBuildDate>
     
 	<atom:link href="https://ottsion.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>beta分布</title>
-      <link>https://ottsion.github.io/tags/beta%E5%88%86%E5%B8%83/</link>
-      <pubDate>Mon, 24 Feb 2020 15:57:32 +0800</pubDate>
+      <title>docker</title>
+      <link>https://ottsion.github.io/tags/docker/</link>
+      <pubDate>Tue, 02 Jun 2020 10:58:24 +0800</pubDate>
       
-      <guid>https://ottsion.github.io/tags/beta%E5%88%86%E5%B8%83/</guid>
+      <guid>https://ottsion.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Dirichlet分布</title>
-      <link>https://ottsion.github.io/tags/dirichlet%E5%88%86%E5%B8%83/</link>
-      <pubDate>Mon, 24 Feb 2020 15:57:32 +0800</pubDate>
+      <title>mysql</title>
+      <link>https://ottsion.github.io/tags/mysql/</link>
+      <pubDate>Tue, 02 Jun 2020 10:58:24 +0800</pubDate>
       
-      <guid>https://ottsion.github.io/tags/dirichlet%E5%88%86%E5%B8%83/</guid>
+      <guid>https://ottsion.github.io/tags/mysql/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Gamma分布</title>
-      <link>https://ottsion.github.io/tags/gamma%E5%88%86%E5%B8%83/</link>
-      <pubDate>Mon, 24 Feb 2020 15:57:32 +0800</pubDate>
+      <title>pycharm</title>
+      <link>https://ottsion.github.io/tags/pycharm/</link>
+      <pubDate>Tue, 26 May 2020 16:58:24 +0800</pubDate>
       
-      <guid>https://ottsion.github.io/tags/gamma%E5%88%86%E5%B8%83/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gibbs采样</title>
-      <link>https://ottsion.github.io/tags/gibbs%E9%87%87%E6%A0%B7/</link>
-      <pubDate>Mon, 24 Feb 2020 15:57:32 +0800</pubDate>
-      
-      <guid>https://ottsion.github.io/tags/gibbs%E9%87%87%E6%A0%B7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>LDA</title>
-      <link>https://ottsion.github.io/tags/lda/</link>
-      <pubDate>Mon, 24 Feb 2020 15:57:32 +0800</pubDate>
-      
-      <guid>https://ottsion.github.io/tags/lda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ML</title>
-      <link>https://ottsion.github.io/tags/ml/</link>
-      <pubDate>Mon, 24 Feb 2020 15:57:32 +0800</pubDate>
-      
-      <guid>https://ottsion.github.io/tags/ml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pLSA</title>
-      <link>https://ottsion.github.io/tags/plsa/</link>
-      <pubDate>Mon, 24 Feb 2020 15:57:32 +0800</pubDate>
-      
-      <guid>https://ottsion.github.io/tags/plsa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>em</title>
-      <link>https://ottsion.github.io/tags/em/</link>
-      <pubDate>Wed, 19 Feb 2020 09:39:04 +0800</pubDate>
-      
-      <guid>https://ottsion.github.io/tags/em/</guid>
+      <guid>https://ottsion.github.io/tags/pycharm/</guid>
       <description></description>
     </item>
     
@@ -269,6 +224,15 @@
       <pubDate>Thu, 11 May 2017 23:59:59 +0000</pubDate>
       
       <guid>https://ottsion.github.io/tags/dl-tensorboard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ML</title>
+      <link>https://ottsion.github.io/tags/ml/</link>
+      <pubDate>Thu, 11 May 2017 23:59:59 +0000</pubDate>
+      
+      <guid>https://ottsion.github.io/tags/ml/</guid>
       <description></description>
     </item>
     

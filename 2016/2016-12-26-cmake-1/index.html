@@ -81,7 +81,7 @@ code.has-jax {
     "articleSection" : "posts",
     "name" : " cmake实践学习 （1）",
     "headline" : " cmake实践学习 （1）",
-    "description" : "星期六, 07. 一月 2017 05:16下午\n 学习笔记，来源： cmake实践\n  准备工作 首先确定自己的编程目录，这里选用：\ncd Documents\/study\/cmake\/\rmkdir t1 \x26amp;\x26amp; cd t1\r建立main.cpp和CMakeLists.txt\n编写程序 main.cpp\n#include\x26lt;stdio.h\x26gt;\rint main()\r{\rprintf(\x26#34;Hello World from t1 main!\\n\x26#34;);\rreturn 0;\r}\rCMakeLists.txt\nPROJECT (HELLO)\rSET (SRC_LIST main.cpp)\rMESSAGE(STATUS\x26quot;THISISBINARYdir\x26quot;${HELLO_BINARY_DIR})\rMESSAGE(STATUS\x26quot;THISISSOURCEdir\x26quot;${HELLO_SOURCE_DIR})\rADD_EXECUTABLE (hello SRC_LIST)\r编译过程 运行：\ncmake . (注意命令后面的点号,代表本目录)。\r输出大概是这个样子:\n-- Check for working C compiler: \/usr\/bin\/gcc\r-- Check for working C compiler: \/usr\/bin\/gcc -- works\r-- Check size of void*\r-- Check size of void* - done\r-- Check for working CXX compiler: \/usr\/bin\/c\x2b\x2b\r-- Check for working CXX compiler: \/usr\/bin\/c\x2b\x2b -- works\r-- This is BINARY dir \/backup\/cmake\/t1\r-- This is SOURCE dir \/backup\/cmake\/t1\r-- Configuring done\r-- Generating done\r-- Build files have been written to: \/backup\/cmake\/t1\r运行（当前目录）：",
+    "description" : "星期六, 07. 一月 2017 05:16下午\n 学习笔记，来源： cmake实践\n  准备工作 首先确定自己的编程目录，这里选用：\ncd Documents\/study\/cmake\/ mkdir t1 \u0026amp;\u0026amp; cd t1 建立main.cpp和CMakeLists.txt\n编写程序 main.cpp\n#include\u0026lt;stdio.h\u0026gt;int main() { printf(\u0026#34;Hello World from t1 main!\\n\u0026#34;); return 0; } CMakeLists.txt\nPROJECT (HELLO) SET (SRC_LIST main.cpp) MESSAGE(STATUS\u0026quot;THISISBINARYdir\u0026quot;${HELLO_BINARY_DIR}) MESSAGE(STATUS\u0026quot;THISISSOURCEdir\u0026quot;${HELLO_SOURCE_DIR}) ADD_EXECUTABLE (hello SRC_LIST) 编译过程 运行：\ncmake . (注意命令后面的点号,代表本目录)。 输出大概是这个样子:\n-- Check for working C compiler: \/usr\/bin\/gcc -- Check for working C compiler: \/usr\/bin\/gcc -- works -- Check size of void* -- Check size of void* - done -- Check for working CXX compiler: \/usr\/bin\/c\u002b\u002b -- Check for working CXX compiler: \/usr\/bin\/c\u002b\u002b -- works -- This is BINARY dir \/backup\/cmake\/t1 -- This is SOURCE dir \/backup\/cmake\/t1 -- Configuring done -- Generating done -- Build files have been written to: \/backup\/cmake\/t1 运行（当前目录）：",
     "inLanguage" : "en-us",
     "author" : "caicai",
     "creator" : "caicai",
@@ -89,10 +89,10 @@ code.has-jax {
     "accountablePerson" : "caicai",
     "copyrightHolder" : "caicai",
     "copyrightYear" : "2016",
-    "datePublished": "2016-12-26 23:59:59 \x2b0000 \x2b0000",
-    "dateModified" : "2016-12-26 23:59:59 \x2b0000 \x2b0000",
+    "datePublished": "2016-12-26 23:59:59 \u002b0000 UTC",
+    "dateModified" : "2016-12-26 23:59:59 \u002b0000 UTC",
     "url" : "https:\/\/ottsion.github.io\/2016\/2016-12-26-cmake-1\/",
-    "wordCount" : "383",
+    "wordCount" : "382",
     "keywords" : [ "cmake", "静心明志"]
 }
 </script>
@@ -200,10 +200,10 @@ mkdir t1 &amp;&amp; cd t1
 </code></pre><p>建立main.cpp和CMakeLists.txt</p>
 <h2 id="编写程序">编写程序</h2>
 <p>main.cpp</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#</span><span style="color:#75715e">include</span><span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span><span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
 {
-	printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Hello World from t1 main!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+	printf(<span style="color:#e6db74">&#34;Hello World from t1 main!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
 	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
 </code></pre></div><p>CMakeLists.txt</p>
