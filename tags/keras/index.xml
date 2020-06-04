@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>keras on 静心明志</title>
+    <link>https://ottsion.github.io/tags/keras/</link>
+    <description>Recent content in keras on 静心明志</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 May 2020 16:58:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://ottsion.github.io/tags/keras/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>keras中实现多任务多loss学习</title>
+      <link>https://ottsion.github.io/2020/keras%E5%A4%9A%E4%BB%BB%E5%8A%A1multi-loss/</link>
+      <pubDate>Tue, 26 May 2020 16:58:24 +0800</pubDate>
+      
+      <guid>https://ottsion.github.io/2020/keras%E5%A4%9A%E4%BB%BB%E5%8A%A1multi-loss/</guid>
+      <description>核心代码如下：
+# create the base pre-trained model input_tensor = Input(shape=(299, 299, 3)) base_model = Xception(include_top=True, weights=&amp;#39;imagenet&amp;#39;, input_tensor=None, input_shape=None) plot_model(base_model, to_file=&amp;#39;xception_model.png&amp;#39;) base_model.layers.pop() base_model.outputs = [base_model.layers[-1].output] base_model.layers[-1].outbound_nodes = [] base_model.output_layers = [base_model.layers[-1]] feature = base_model img1 = Input(shape=(299, 299, 3), name=&amp;#39;img_1&amp;#39;) img2 = Input(shape=(299, 299, 3), name=&amp;#39;img_2&amp;#39;) feature1 = feature(img1) feature2 = feature(img2) # Three loss functions category_predict1 = Dense(100, activation=&amp;#39;softmax&amp;#39;, name=&amp;#39;ctg_out_1&amp;#39;)( Dropout(0.5)(feature1) ) category_predict2 = Dense(100, activation=&amp;#39;softmax&amp;#39;, name=&amp;#39;ctg_out_2&amp;#39;)( Dropout(0.5)(feature2) ) dis = Lambda(eucl_dist, name=&amp;#39;square&amp;#39;)([feature1, feature2]) judge = Dense(2, activation=&amp;#39;softmax&amp;#39;, name=&amp;#39;bin_out&amp;#39;)(dis) model = Model(inputs=[img1, img2], outputs=[category_predict1, category_predict2, judge]) model.</description>
+    </item>
+    
+  </channel>
+</rss>
